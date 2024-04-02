@@ -4,7 +4,7 @@
 @endsection
 @section('css') @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/blogs.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/blogs.js')}}"></script>
 @endsection
 @section('og_image')
     {{getBlogImage($blog->image)}}

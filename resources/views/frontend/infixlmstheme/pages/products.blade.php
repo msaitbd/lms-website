@@ -9,7 +9,7 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/classes.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/classes.js')}}"></script>
     <script src="{{asset('Modules/Store/Resources/assets/js/front_script.js')}}"></script>
     <script src="{{asset('Modules/Store/Resources/assets/js/select2.min.js')}}"></script>
     <script>

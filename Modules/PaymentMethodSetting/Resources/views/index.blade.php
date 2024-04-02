@@ -2231,5 +2231,5 @@
 
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/gateway.js')}}"></script>
+    <script src="{{asset('backend/js/gateway.js')}}"></script>
 @endpush

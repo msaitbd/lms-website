@@ -344,7 +344,7 @@
                                                 <div class="preview_drag_inner">
                                                     <div class="img">
                                                         <img
-                                                            src="{{asset('public/frontend/infixlmstheme')}}/img/account/gallery_icon.png"
+                                                            src="{{asset('frontend/infixlmstheme')}}/img/account/gallery_icon.png"
                                                             alt="">
                                                     </div>
                                                     <p>{{__('student.Drop your file here')}}</p>

@@ -21,7 +21,7 @@
                                     <a href="{{courseDetailsUrl(@$quiz->id,@$quiz->type,@$quiz->slug)}}">
                                         <div class="thumb">
                                             <div class="thumb_inner lazy"
-                                                 data-src="{{ file_exists($quiz->thumbnail) ? asset($quiz->thumbnail) : asset('public/\uploads/course_sample.png') }}">
+                                                 data-src="{{ file_exists($quiz->thumbnail) ? asset($quiz->thumbnail) : asset('\uploads/course_sample.png') }}">
                                             </div>
                                             <x-price-tag :price="$quiz->price"
                                                          :discount="$quiz->discount_price"/>

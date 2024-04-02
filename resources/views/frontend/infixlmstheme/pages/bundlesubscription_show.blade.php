@@ -3,7 +3,7 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('frontend.Bundle')}}
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}"/>
 
 @endsection
 
@@ -438,7 +438,7 @@
             $('#formSubmitBtn').attr('href', url)
         });
     </script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/class_details.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/class_details.js')}}"></script>
 
 @endsection
 

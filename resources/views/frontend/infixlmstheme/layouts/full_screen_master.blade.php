@@ -24,17 +24,17 @@
 
     <x-frontend-dynamic-style-color/>
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/fluidplayer.min.css">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/fluidplayer.min.css">
 
-    {{--    <link rel="stylesheet" href="{{asset('public/backend/css/style.css')}}"/>--}}
-    <link rel="stylesheet" href="{{asset('public/css/preloader.css')}}"/>
+    {{--    <link rel="stylesheet" href="{{asset('backend/css/style.css')}}"/>--}}
+    <link rel="stylesheet" href="{{asset('css/preloader.css')}}"/>
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/app.css">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/frontend_style.css">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/fontawesome.css ">
-    <link rel="stylesheet" href="{{asset('public/backend/css/themify-icons.css')}}"/>
-    <script src="{{asset('public/js/common.js')}}"></script>
-    {{--    <script src="{{asset('public/frontend/infixlmstheme/js/app.js')}}"></script>--}}
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/app.css">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/frontend_style.css">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/fontawesome.css ">
+    <link rel="stylesheet" href="{{asset('backend/css/themify-icons.css')}}"/>
+    <script src="{{asset('js/common.js')}}"></script>
+    {{--    <script src="{{asset('frontend/infixlmstheme/js/app.js')}}"></script>--}}
     @yield('css')
     <script>
         $(document).on("click", ".play_toggle_btn", function () {
@@ -60,7 +60,7 @@
 @include('preloader')
 
 
-<script src="{{ asset('public/frontend/infixlmstheme') }}/js/fluidplayer.min.js"></script>
+<script src="{{ asset('frontend/infixlmstheme') }}/js/fluidplayer.min.js"></script>
 <input type="hidden" name="base_url" class="base_url" value="{{url('/')}}">
 <input type="hidden" name="csrf_token" class="csrf_token" value="{{csrf_token()}}">
 

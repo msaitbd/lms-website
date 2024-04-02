@@ -4,7 +4,7 @@
 @endsection
 @section('css')
 
-    <link href="{{ asset('public/frontend/infixlmstheme/css/class_details.css') }}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{ asset('frontend/infixlmstheme/css/class_details.css') }}{{assetVersion()}}" rel="stylesheet"/>
 
 @endsection
 
@@ -34,7 +34,7 @@
                                     <a href="{{route('continueCourse',[$raw->course->slug])}}">
                                         <div class="thumb">
                                             <div class="thumb_inner lazy"
-                                                 data-src="{{ file_exists($raw->course->thumbnail) ? asset($raw->course->thumbnail) : asset('public/\uploads/course_sample.png') }}">
+                                                 data-src="{{ file_exists($raw->course->thumbnail) ? asset($raw->course->thumbnail) : asset('\uploads/course_sample.png') }}">
 
 <span class="prise_tag">
       @if (@$raw->course->discount_price!=null)
@@ -80,5 +80,5 @@
 
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/class_details.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/class_details.js')}}"></script>
 @endsection

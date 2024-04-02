@@ -8,7 +8,7 @@
                     <div class="reward-card">
                         <div class="reward-card-points d-flex align-items-center">
                             <div class="img">
-                                <img src="{{asset('public/frontend/infixlmstheme/img/rewards')}}/1.png"
+                                <img src="{{asset('frontend/infixlmstheme/img/rewards')}}/1.png"
                                      alt="">
                             </div>
                             <div class="content">
@@ -23,7 +23,7 @@
                 <div class="col-md-6 col-xl-4 col-xxl-3">
                     <div class="reward-card">
                         <div class="reward-card-points d-flex align-items-center">
-                            <div class="img"><img src="{{asset('public/frontend/infixlmstheme/img/rewards')}}/2.png"
+                            <div class="img"><img src="{{asset('frontend/infixlmstheme/img/rewards')}}/2.png"
                                                   alt=""></div>
                             <div class="content">
                                 <h4> {{$total_remind}}</h4>
@@ -35,7 +35,7 @@
                 <div class="col-md-6 col-xl-4 col-xxl-3">
                     <div class="reward-card">
                         <div class="reward-card-points d-flex align-items-center">
-                            <div class="img"><img src="{{asset('public/frontend/infixlmstheme/img/rewards')}}/3.png"
+                            <div class="img"><img src="{{asset('frontend/infixlmstheme/img/rewards')}}/3.png"
                                                   alt=""></div>
                             <div class="content">
                                 <h4> {{$total_earn}}</h4>
@@ -47,7 +47,7 @@
                 <div class="col-md-6 col-xl-4 col-xxl-3">
                     <div class="reward-card">
                         <div class="reward-card-points d-flex align-items-center">
-                            <div class="img"><img src="{{asset('public/frontend/infixlmstheme/img/rewards')}}/4.png"
+                            <div class="img"><img src="{{asset('frontend/infixlmstheme/img/rewards')}}/4.png"
                                                   alt=""></div>
                             <div class="content">
                                 <h4> {{$total_spend}}</h4>
@@ -64,7 +64,7 @@
                         <div class="reward-card w-100">
                             <div class="reward-blance d-flex align-items-center flex-wrap">
                                 <div class="reward-blance-img">
-                                    <img src="{{asset('public/frontend/infixlmstheme/img/rewards')}}/blance-img.png"
+                                    <img src="{{asset('frontend/infixlmstheme/img/rewards')}}/blance-img.png"
                                          alt="">
                                 </div>
                                 <div class="reward-blance-content">
@@ -91,7 +91,7 @@
                         <div class="reward-card badge-card">
                             <div class="reward-badge text-center">
                                 <div class="img">
-                                    <img src="{{asset('public/frontend/infixlmstheme/img/rewards/badge.png')}}"
+                                    <img src="{{asset('frontend/infixlmstheme/img/rewards/badge.png')}}"
                                          alt="">
                                 </div>
                                 <h4>{{__('frontend.Want to earn more points?')}}</h4>
@@ -264,7 +264,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-body text-center">
-                    <img src="{{asset('public/frontend/infixlmstheme/img/rewards/exchange-img.png')}}" alt="">
+                    <img src="{{asset('frontend/infixlmstheme/img/rewards/exchange-img.png')}}" alt="">
 
 
                     <h4>

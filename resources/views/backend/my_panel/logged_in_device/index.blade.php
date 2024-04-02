@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('public/backend/css/daterangepicker.css') }}{{assetVersion()}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/daterangepicker.css') }}{{assetVersion()}}">
 @endpush
 @section('mainContent')
 
@@ -142,7 +142,7 @@
 @endsection
 
 @push('scripts')
-    <script src="{{asset('public/backend/js/daterangepicker.min.js')}}{{assetVersion()}}"></script>
-    <script src="{{asset('public/modules/common/date_range_init.js')}}{{assetVersion()}}"></script>
-    <script src="{{asset('public/modules/my_panel/logged_in_device.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/daterangepicker.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/common/date_range_init.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/my_panel/logged_in_device.js')}}{{assetVersion()}}"></script>
 @endpush

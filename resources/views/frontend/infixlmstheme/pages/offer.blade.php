@@ -3,7 +3,7 @@
 @section('css') @endsection
 
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/classes.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/classes.js')}}"></script>
 @endsection
 @section('mainContent')
 

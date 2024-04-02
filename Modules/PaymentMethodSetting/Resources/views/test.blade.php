@@ -359,6 +359,6 @@
 
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/gateway.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/deposit.js')}}"></script>
+    <script src="{{asset('backend/js/gateway.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/deposit.js')}}"></script>
 @endpush

@@ -2,7 +2,7 @@
 @section('title'){{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('frontend.Blog')}} @endsection
 @section('css') @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/blogs.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/blogs.js')}}"></script>
 @endsection
 
 @section('mainContent')

@@ -193,5 +193,5 @@
     @include('backend.partials.delete_modal')
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/timezone.js')}}"></script>
+    <script src="{{asset('backend/js/timezone.js')}}"></script>
 @endpush

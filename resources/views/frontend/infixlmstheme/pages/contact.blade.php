@@ -22,6 +22,6 @@
 @endsection
 @section('js')
     <script src="https://maps.googleapis.com/maps/api/js?key={{Settings('gmap_key') }}"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/map.js"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/contact.js')}}"></script>
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/map.js"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/contact.js')}}"></script>
 @endsection

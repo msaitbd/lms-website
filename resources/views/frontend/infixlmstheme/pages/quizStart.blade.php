@@ -3,11 +3,11 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} |    {{$course->title}}
 @endsection
 @section('css')
-    <link href="{{asset('public/backend/css/summernote-bs4.min.css/')}}{{assetVersion()}}" rel="stylesheet">
+    <link href="{{asset('backend/css/summernote-bs4.min.css/')}}{{assetVersion()}}" rel="stylesheet">
 @endsection
 @section('js')
-    <script src="{{ asset('public/frontend/infixlmstheme/js/quiz_start.js') }}{{assetVersion()}}"></script>
-    <script src="{{asset('public/backend/js/summernote-bs4.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/quiz_start.js') }}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/summernote-bs4.min.js')}}{{assetVersion()}}"></script>
     <script>
         if ($('.lms_summernote').length) {
             $('.lms_summernote').summernote({

@@ -2870,7 +2870,7 @@ class WebsiteApiController extends Controller
                 $certificate->start_date = showDate($certificate->start_date);
                 $certificate->end_date = empty($certificate->end_date) ? trans('org.Limitless') : showDate($certificate->end_date);
 
-                $certificate->image = asset('public/certificate/' . $certificate->id . '.jpg');
+                $certificate->image = asset('certificate/' . $certificate->id . '.jpg');
             }
 
             return [

@@ -34,7 +34,7 @@ try {
                     <div class="col-xl-12">
                         <div class="error_wrapper_info text-center">
                             <div class="thumb">
-                                <img src="{{asset('public/errors/'.$exception->getStatusCode().'.png')}}" alt="">
+                                <img src="{{asset('errors/'.$exception->getStatusCode().'.png')}}" alt="">
                             </div>
                             <h3>@yield('message')</h3>
                             <p>@yield('details')</p>

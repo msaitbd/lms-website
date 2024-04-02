@@ -9,10 +9,10 @@
             position: relative !important;
         }
     </style>
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}"/>
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/quiz_details.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/quiz_details.css')}}{{assetVersion()}}"/>
     @if(isModuleActive('WaitList'))
-        <link href="{{asset('public/frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
+        <link href="{{asset('frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
     @endif
 @endsection
 @section('meta_title')
@@ -31,12 +31,12 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/html2pdf.bundle.js{{assetVersion()}}"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/quiz_details.js') }}{{assetVersion()}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/class_details.js')}}{{assetVersion()}}"></script>
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/html2pdf.bundle.js{{assetVersion()}}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/quiz_details.js') }}{{assetVersion()}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/class_details.js')}}{{assetVersion()}}"></script>
     @if(isModuleActive('WaitList'))
-        <script src="{{asset('public/frontend/infixlmstheme/js/city.js')}}{{assetVersion()}}"></script>
-        <script src="{{asset('public/frontend/infixlmstheme/js/select2.min.js')}}{{assetVersion()}}"></script>
+        <script src="{{asset('frontend/infixlmstheme/js/city.js')}}{{assetVersion()}}"></script>
+        <script src="{{asset('frontend/infixlmstheme/js/select2.min.js')}}{{assetVersion()}}"></script>
     @endif
     <script>
 

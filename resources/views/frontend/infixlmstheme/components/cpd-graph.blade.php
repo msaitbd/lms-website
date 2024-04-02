@@ -17,8 +17,8 @@
     </div>
 @endif
 @section('js')
-    <script src="{{asset('public/backend/vendors/chartlist/Chart.min.js')}}"></script>
-    <script src="{{asset('public/backend/js/daterangepicker.min.js')}}"></script>
+    <script src="{{asset('backend/vendors/chartlist/Chart.min.js')}}"></script>
+    <script src="{{asset('backend/js/daterangepicker.min.js')}}"></script>
     <script>
         var course_title = [];
         var complete_percentage = [];

@@ -46,7 +46,7 @@
     </a>
 @endif
 @livewireScripts
-<script src="{{ asset('public/js/alpine.min.js') }}{{assetVersion()}}"></script>
+<script src="{{ asset('js/alpine.min.js') }}{{assetVersion()}}"></script>
 
 <script>
     window.jsLang = function (key, replace) {

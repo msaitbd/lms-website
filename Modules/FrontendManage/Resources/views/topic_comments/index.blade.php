@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('public/backend/css/daterangepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/css/daterangepicker.css') }}">
 @endpush
 
 @section('mainContent')
@@ -218,7 +218,7 @@
 @endsection
 @push('scripts')
 
-    <script src="{{asset('public/backend/js/daterangepicker.min.js')}}"></script>
+    <script src="{{asset('backend/js/daterangepicker.min.js')}}"></script>
 
 
     @php

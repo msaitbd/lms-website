@@ -529,7 +529,7 @@
         </div>
     </div>
 </section>
-<script src="{{ asset('public/js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
 <script type="text/javascript">
     (function ($) {
         "use strict";

@@ -20,7 +20,7 @@
                                     <h3 class="mb-0 mr-30 text-nowrap">{{ __('leave.Upload Staff Via CSV')}}</h3>
                                     <div class="d-flex justify-content-end align-items-center  flex-wrap flex-grow-1">
                                         <ul class="d-flex flex-wrap">
-                                            <li><a download class="primary-btn radius_30px mr-10 fix-gr-bg" href="{{ asset('public/uploads/staff.xlsx') }}"><i class="ti-import"></i>Sample File Download</a></li>
+                                            <li><a download class="primary-btn radius_30px mr-10 fix-gr-bg" href="{{ asset('uploads/staff.xlsx') }}"><i class="ti-import"></i>Sample File Download</a></li>
                                         </ul>
                                     </div>
                                 </div>

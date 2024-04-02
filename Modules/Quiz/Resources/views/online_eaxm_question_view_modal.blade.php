@@ -105,6 +105,6 @@
     @endif
 </div>
 @push('scripts')
-    <script src="{{asset('public/backend/')}}/js/main.js"></script>
+    <script src="{{asset('backend/')}}/js/main.js"></script>
 @endpush
 

@@ -308,8 +308,8 @@
 @endsection
 
 @push('scripts')
-    <script src="{{asset('public/modules/profile/repeater/repeater.js')}}"></script>
-    <script src="{{asset('public/modules/profile/repeater/indicator-repeater.js')}}"></script>
+    <script src="{{asset('modules/profile/repeater/repeater.js')}}"></script>
+    <script src="{{asset('modules/profile/repeater/indicator-repeater.js')}}"></script>
     <script>
         (function ($) {
             "use strict";

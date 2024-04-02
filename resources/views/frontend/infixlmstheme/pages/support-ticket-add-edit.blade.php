@@ -3,10 +3,10 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('ticket.support_ticket')}}
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/support.css')}}{{assetVersion()}}">
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/support.css')}}{{assetVersion()}}">
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/support.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/support.js')}}{{assetVersion()}}"></script>
 @endsection
 
 @section('mainContent')

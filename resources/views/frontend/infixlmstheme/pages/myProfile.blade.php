@@ -3,18 +3,18 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('frontendmanage.My Profile')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/checkout.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/myProfile.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/checkout.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/myProfile.css')}}{{assetVersion()}}" rel="stylesheet"/>
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/select2.min.js')}}{{assetVersion()}}"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/my_profile.js') }}{{assetVersion()}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/select2.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/my_profile.js') }}{{assetVersion()}}"></script>
 
-    <script src="{{asset('public/frontend/infixlmstheme/js/city.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/city.js')}}{{assetVersion()}}"></script>
 
 
-    <script src="{{asset('public/backend/js/summernote-bs4.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/summernote-bs4.min.js')}}{{assetVersion()}}"></script>
     <script>
         $(document).ready(function () {
             $('.primary_textarea4 ').summernote({

@@ -2,7 +2,7 @@
 @section('title'){{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('frontendmanage.Become Instructor')}} @endsection
 @section('css') @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/become_instructor.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/become_instructor.js')}}"></script>
 
     @if ($errors->any())
         <script>

@@ -255,7 +255,7 @@
 
 
 
-    <script src="{{asset('public/backend/js/blog_list.js')}}"></script>
+    <script src="{{asset('backend/js/blog_list.js')}}"></script>
 
 @endsection
 

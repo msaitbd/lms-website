@@ -139,11 +139,11 @@
                                                                         @if(isset($question['isSubmit']))
                                                                             @if(isset($question['isWrong']) &&  $question['isWrong'])
                                                                                 <img
-                                                                                    src="{{asset('public/backend/')}}/img/wrong.png"
+                                                                                    src="{{asset('backend/')}}/img/wrong.png"
                                                                                     alt="">
                                                                             @else
                                                                                 <img
-                                                                                    src="{{asset('public/backend/')}}/img/correct.png"
+                                                                                    src="{{asset('backend/')}}/img/correct.png"
                                                                                     alt="">
                                                                             @endif
                                                                             <input type="hidden"

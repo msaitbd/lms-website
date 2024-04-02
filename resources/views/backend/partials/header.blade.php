@@ -10,7 +10,7 @@
     </title>
     <meta name="_token" content="{!! csrf_token() !!}"/>
     @include('backend.partials.style')
-    <script src="{{asset('public/js/common.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('js/common.js')}}{{assetVersion()}}"></script>
 
 
     <script>

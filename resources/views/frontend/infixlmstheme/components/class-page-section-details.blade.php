@@ -95,7 +95,7 @@
                 <div class="Nocouse_wizged text-center d-flex align-items-center justify-content-center">
                     <div class="thumb">
                         <img style="width: 50px"
-                             src="{{ asset('public/frontend/infixlmstheme') }}/img/not-found.png"
+                             src="{{ asset('frontend/infixlmstheme') }}/img/not-found.png"
                              alt="">
                     </div>
                     <h1>

@@ -23,7 +23,7 @@
 
                         <div class="single_module text-center">
                             <div class="icon">
-                                <img src="{{asset('public/frontend/infixlmstheme/img/feature/feature1.png')}}" alt=""
+                                <img src="{{asset('frontend/infixlmstheme/img/feature/feature1.png')}}" alt=""
                                      style="max-width: 100%">
                             </div>
                             <h2>
@@ -37,7 +37,7 @@
 
                         <div class="single_module text-center">
                             <div class="icon">
-                                <img src="{{asset('public/frontend/infixlmstheme/img/feature/feature2.png')}}" alt=""
+                                <img src="{{asset('frontend/infixlmstheme/img/feature/feature2.png')}}" alt=""
                                      style="max-width: 100%">
                             </div>
                             <h2>
@@ -49,7 +49,7 @@
                         </div>
                         <div class="single_module text-center">
                             <div class="icon">
-                                <img src="{{asset('public/frontend/infixlmstheme/img/feature/feature3.png')}}" alt=""
+                                <img src="{{asset('frontend/infixlmstheme/img/feature/feature3.png')}}" alt=""
                                      style="max-width: 100%">
                             </div>
                             <h2>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="single_module text-center">
                             <div class="icon">
-                                <img src="{{asset('public/frontend/infixlmstheme/img/feature/feature4.png')}}" alt=""
+                                <img src="{{asset('frontend/infixlmstheme/img/feature/feature4.png')}}" alt=""
                                      style="max-width: 100%">
                             </div>
                             <h2>

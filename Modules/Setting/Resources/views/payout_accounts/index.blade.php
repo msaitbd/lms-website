@@ -66,5 +66,5 @@
     @include('backend.partials.delete_modal')
 @endsection
 @push('scripts')
-    <script src="{{asset('public/modules/settings/payout_accounts.js')}}"></script>
+    <script src="{{asset('modules/settings/payout_accounts.js')}}"></script>
 @endpush

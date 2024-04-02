@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{asset('public/backend/css/student_list.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/css/student_list.css')}}{{assetVersion()}}"/>
 @endpush
 
 @section('table')
@@ -244,7 +244,7 @@
 
 
     </script>
-    <script src="{{asset('public/backend/js/instructor_list.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/instructor_list.js')}}{{assetVersion()}}"></script>
 @endpush
 
 

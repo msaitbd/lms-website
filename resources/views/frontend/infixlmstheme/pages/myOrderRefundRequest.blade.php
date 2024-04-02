@@ -3,7 +3,7 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('invoice.Invoice')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/my_invoice.css')}}{{assetVersion()}}" rel="stylesheet"
+    <link href="{{asset('frontend/infixlmstheme/css/my_invoice.css')}}{{assetVersion()}}" rel="stylesheet"
           media="screen,print"/>
     <style>
         .thumb img {
@@ -61,8 +61,8 @@
     <x-my-order-refund-request-page-section :id="$id"/>
 @endsection
 @section('js')
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/html2pdf.bundle.js"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/my_invoice.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/html2pdf.bundle.js"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/my_invoice.js') }}"></script>
 
     <script type="text/javascript">
         (function ($) {

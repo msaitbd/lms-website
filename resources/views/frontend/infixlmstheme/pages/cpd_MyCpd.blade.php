@@ -11,7 +11,7 @@
 @endsection
 @section('css') @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/my_course.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/my_course.js')}}"></script>
 @endsection
 
 @section('mainContent')

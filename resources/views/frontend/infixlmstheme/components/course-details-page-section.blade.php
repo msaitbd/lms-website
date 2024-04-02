@@ -554,7 +554,7 @@
                                                         <div class="thumb">
                                                             <a href="{{courseDetailsUrl(@$c->id,@$c->type,@$c->slug)}}">
                                                                 <img class="w-100"
-                                                                     src="{{ file_exists($c->thumbnail) ? asset($c->thumbnail) : asset('public/\uploads/course_sample.png') }}"
+                                                                     src="{{ file_exists($c->thumbnail) ? asset($c->thumbnail) : asset('\uploads/course_sample.png') }}"
                                                                      alt="">
                                                                 <x-price-tag :price="$course->price"
                                                                              :discount="$course->discount_price"/>
@@ -834,7 +834,7 @@
                                                             <div class="thumb">
                                                                 <a href="{{courseDetailsUrl(@$r->id,@$r->type,@$r->slug)}}">
                                                                     <img class="w-100"
-                                                                         src="{{ file_exists($r->thumbnail) ? asset($r->thumbnail) : asset('public/\uploads/course_sample.png') }}"
+                                                                         src="{{ file_exists($r->thumbnail) ? asset($r->thumbnail) : asset('\uploads/course_sample.png') }}"
                                                                          alt="">
                                                                     <x-price-tag :price="$r->price"
                                                                                  :discount="$r->discount_price"/>

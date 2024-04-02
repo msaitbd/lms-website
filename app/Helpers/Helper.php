@@ -1623,7 +1623,7 @@ if (!function_exists('getLogoImage')) {
         if (File::exists($path)) {
             return asset($path);
         } else {
-            return asset('public/uploads/settings/logo.png');
+            return asset('uploads/settings/logo.png');
         }
     }
 }
@@ -1635,9 +1635,9 @@ if (!function_exists('showImage')) {
             return asset($path);
         } else {
             if ($type == 'cover_photo') {
-                return asset('public/assets/profile/cover.jpg');
+                return asset('assets/profile/cover.jpg');
             }
-            return asset('public/assets/profile/dummy.png');
+            return asset('assets/profile/dummy.png');
         }
     }
 }
@@ -1649,17 +1649,17 @@ if (!function_exists('showPreview')) {
             return asset($path);
         } else {
             if ($type == 'image') {
-                return asset('public/preview/image.png');
+                return asset('preview/image.png');
             } elseif ($type == 'video') {
-                return asset('public/preview/video.png');
+                return asset('preview/video.png');
             } elseif ($type == 'pdf') {
-                return asset('public/preview/pdf.png');
+                return asset('preview/pdf.png');
             } elseif ($type == 'zip') {
-                return asset('public/preview/zip.png');
+                return asset('preview/zip.png');
             } elseif ($type == 'doc') {
-                return asset('public/preview/doc.png');
+                return asset('preview/doc.png');
             } else {
-                return asset('public/preview/invalid.png');
+                return asset('preview/invalid.png');
             }
         }
     }
@@ -1672,7 +1672,7 @@ if (!function_exists('getBlogImage')) {
         if (File::exists($path)) {
             return asset($path);
         } else {
-            return asset('public/demo/blog/no-image.jpg');
+            return asset('demo/blog/no-image.jpg');
         }
     }
 }

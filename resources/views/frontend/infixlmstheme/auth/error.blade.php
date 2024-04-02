@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="{{asset(Settings('favicon') )}}{{assetVersion()}}" type="image/png"/>
     <title>404</title>
-    <link rel="stylesheet" href="{{asset('public/backend/')}}/vendors/css/bootstrap.css{{assetVersion()}}"/>
-    <link rel="stylesheet" href="{{asset('public/backend/')}}/vendors/css/themify-icons.css{{assetVersion()}}"/>
-    <link rel="stylesheet" href="{{asset('public/backend/')}}/css/style.css{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/')}}/vendors/css/bootstrap.css{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/')}}/vendors/css/themify-icons.css{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/')}}/css/style.css{{assetVersion()}}"/>
 </head>
 <body class="error admin">
 
@@ -20,7 +20,7 @@
                 <div class="text-center">
                     <div class="logo-container">
                         <a href="#">
-                            <img src="{{asset('public/backend/img/404_Error.png')}}" alt="" width="100%">
+                            <img src="{{asset('backend/img/404_Error.png')}}" alt="" width="100%">
                         </a>
                     </div>
                     <div class="content mt-30">
@@ -41,10 +41,10 @@
 <!--================ Start End Login Area =================-->
 
 
-<script src="{{asset('public/backend/')}}/vendors/js/jquery-3.5.1.min.js"></script>
-{{--    <script src="{{asset('public/backend/')}}/vendors/js/jquery-3.2.1.min.js"></script>--}}
-<script src="{{asset('public/backend/')}}/vendors/js/popper.js"></script>
-<script src="{{asset('public/backend/')}}/vendors/js/bootstrap.min.js"></script>
+<script src="{{asset('backend/')}}/vendors/js/jquery-3.5.1.min.js"></script>
+{{--    <script src="{{asset('backend/')}}/vendors/js/jquery-3.2.1.min.js"></script>--}}
+<script src="{{asset('backend/')}}/vendors/js/popper.js"></script>
+<script src="{{asset('backend/')}}/vendors/js/bootstrap.min.js"></script>
 <script>
     $('.primary-btn').on('click', function (e) {
         // Remove any old one

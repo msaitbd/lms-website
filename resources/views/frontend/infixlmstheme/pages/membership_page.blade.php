@@ -3,7 +3,7 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('membership.Membership')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/subscription.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/subscription.css')}}{{assetVersion()}}" rel="stylesheet"/>
 @endsection
 
 
@@ -18,5 +18,5 @@
 
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/subscription.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/subscription.js')}}"></script>
 @endsection

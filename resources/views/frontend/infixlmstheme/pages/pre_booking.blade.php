@@ -11,7 +11,7 @@
     </style>
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/deposit.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/deposit.js')}}"></script>
 
 @endsection
 

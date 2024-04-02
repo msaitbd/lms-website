@@ -3,9 +3,9 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{ $course->title}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/full_screen.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link href="{{asset('public/backend/css/summernote-bs4.min.css')}}{{assetVersion()}}" rel="stylesheet">
+    <link href="{{asset('frontend/infixlmstheme/css/full_screen.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('backend/css/summernote-bs4.min.css')}}{{assetVersion()}}" rel="stylesheet">
     <style>
         .default-font {
             font-family: "Jost", sans-serif;
@@ -913,10 +913,10 @@
                         </script>
                     @endpush
                 @else
-                    <link href="{{ asset('public/frontend/infixlmstheme/plugins/css/jquery.mb.YTPlayer.min.css') }}"
+                    <link href="{{ asset('frontend/infixlmstheme/plugins/css/jquery.mb.YTPlayer.min.css') }}"
                           media="all" rel="stylesheet" type="text/css">
 
-                    <script src="{{ asset('public/frontend/infixlmstheme/plugins/jquery.mb.YTPlayer.js') }}"></script>
+                    <script src="{{ asset('frontend/infixlmstheme/plugins/jquery.mb.YTPlayer.js') }}"></script>
 
                     <div class="video_iframe" id="video-id"
                          data-property="{videoURL:'http://youtu.be/{{ $youtube_url }}',containment:'self',   mute:false, startAt:0, loop:false, opacity:1,seekbar:{{ Settings('show_seek_bar') ? 'true' : 'false' }}}">
@@ -1181,10 +1181,10 @@
             @endif
 
             @if ($lesson->host == 'PDF')
-                <script src="{{ asset('public/frontend/infixlmstheme/js/pdf.min.js') }}"></script>
-                <script src="{{ asset('public/frontend/infixlmstheme/js/pdfjs-viewer.js') }}"></script>
-                <script src="{{ asset('public/frontend/infixlmstheme/js/zoom.js') }}"></script>
-                <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/css/pdfjs-viewer.css') }}"/>
+                <script src="{{ asset('frontend/infixlmstheme/js/pdf.min.js') }}"></script>
+                <script src="{{ asset('frontend/infixlmstheme/js/pdfjs-viewer.js') }}"></script>
+                <script src="{{ asset('frontend/infixlmstheme/js/zoom.js') }}"></script>
+                <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/css/pdfjs-viewer.css') }}"/>
                 <style>
                     .small_btn_icon {
                         padding: 10px;
@@ -1193,7 +1193,7 @@
 
                 <script>
                     var pdfjsLib = window['pdfjs-dist/build/pdf'];
-                    pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ asset('public/frontend/infixlmstheme/js/pdf.worker.min.js') }}';
+                    pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ asset('frontend/infixlmstheme/js/pdf.worker.min.js') }}';
                 </script>
                 <div style="border: none;min-height: 400px" class="pdfviewer w-100  h-100">
                     <div class="pdftoolbar text-center row m-0 p-0">
@@ -1870,15 +1870,15 @@
         @endif
     @endif
 
-    <script src="{{ asset('public/frontend/infixlmstheme/js/class_details.js') }}"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/full_screen_video.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/class_details.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/full_screen_video.js') }}"></script>
     @if ($lesson->is_quiz == 1)
         @if (!$result)
-            <script src="{{ asset('public/frontend/infixlmstheme/js/quiz_start.js') }}{{assetVersion()}}"></script>
+            <script src="{{ asset('frontend/infixlmstheme/js/quiz_start.js') }}{{assetVersion()}}"></script>
         @endif
         @include(theme('partials._quiz_exp_script'))
     @endif
-    <script src="{{ asset('public/backend/js/summernote-bs4.min.js') }}"></script>
+    <script src="{{ asset('backend/js/summernote-bs4.min.js') }}"></script>
 
 
     <script>

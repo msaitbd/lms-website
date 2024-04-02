@@ -7,7 +7,7 @@
                     <a href="{{route('blogDetails',[$blog->slug])}}">
                         <div class="thumb">
                             <div class="thumb_inner lazy"
-                                 data-src="{{ file_exists($blog->thumbnail) ? asset($blog->thumbnail) : asset('public/\uploads/course_sample.png') }}">
+                                 data-src="{{ file_exists($blog->thumbnail) ? asset($blog->thumbnail) : asset('\uploads/course_sample.png') }}">
                             </div>
                         </div>
                     </a>

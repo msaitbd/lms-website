@@ -9,8 +9,8 @@
     }
 @endphp
 @if(config('app.demo_mode') && env('DEMO_RESET_TIME') && \Illuminate\Support\Facades\Storage::has('.reset_log') && !empty($next_time))
-    <link rel="stylesheet" href="{{asset('public/vendor/flipdown/flipdown.css')}}"/>
-    <script src="{{asset('public/vendor/flipdown/flipdown.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('vendor/flipdown/flipdown.css')}}"/>
+    <script src="{{asset('vendor/flipdown/flipdown.js')}}"></script>
     <style>
         .flipdown .rotor {
         }

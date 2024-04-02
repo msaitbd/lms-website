@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{ asset('public/backend/css/daterangepicker.css') }}{{assetVersion()}}">
+    <link rel="stylesheet" href="{{ asset('backend/css/daterangepicker.css') }}{{assetVersion()}}">
     </style>
 
 @endpush
@@ -308,7 +308,7 @@
 
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/daterangepicker.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/daterangepicker.min.js')}}{{assetVersion()}}"></script>
 
     @php
         $url =route('admin.getCancelLogsData');

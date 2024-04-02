@@ -12,7 +12,7 @@
                         <div class="account_profile_thumb text-center mb_30">
                             <div class=" mb-15">
                                 <img class="w-100 h-100"
-                                     src="{{asset('public/frontend/infixlmstheme/img/account/delete_account.png')}}"
+                                     src="{{asset('frontend/infixlmstheme/img/account/delete_account.png')}}"
                                      alt="">
                             </div>
                         </div>

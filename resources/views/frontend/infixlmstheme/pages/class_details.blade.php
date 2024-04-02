@@ -21,9 +21,9 @@
             position: relative !important;
         }
     </style>
-    <link href="{{asset('public/frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}" rel="stylesheet"/>
     @if(isModuleActive('WaitList'))
-        <link href="{{asset('public/frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
+        <link href="{{asset('frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
     @endif
 @endsection
 
@@ -41,12 +41,12 @@
 
 @section('js')
 
-    <script src="{{asset('public/frontend/infixlmstheme/js/class_details.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/videopopup.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/video.popup.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/class_details.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/videopopup.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/video.popup.js')}}"></script>
     @if(isModuleActive('WaitList'))
-        <script src="{{asset('public/frontend/infixlmstheme/js/city.js')}}"></script>
-        <script src="{{asset('public/frontend/infixlmstheme/js/select2.min.js')}}"></script>
+        <script src="{{asset('frontend/infixlmstheme/js/city.js')}}"></script>
+        <script src="{{asset('frontend/infixlmstheme/js/select2.min.js')}}"></script>
     @endif
 
     <script>

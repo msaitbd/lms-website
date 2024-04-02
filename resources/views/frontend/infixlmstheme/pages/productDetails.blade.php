@@ -21,19 +21,19 @@
             position: relative !important;
         }
     </style>
-    <link href="{{asset('public/frontend/infixlmstheme/css/videopopup.css')}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/video.popup.css')}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/class_details.css')}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/videopopup.css')}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/video.popup.css')}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/class_details.css')}}" rel="stylesheet"/>
 
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/jquery.nice-number.min.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/css/store_style.css') }}">
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/jquery.nice-number.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/css/store_style.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/css/slicknav.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/js/vendor/calender_js/core/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/js/vendor/calender_js/daygrid/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/js/vendor/calender_js/timegrid/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/js/vendor/calender_js/list/main.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/css/jquery.ez-plus.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/css/slicknav.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/js/vendor/calender_js/core/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/js/vendor/calender_js/daygrid/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/js/vendor/calender_js/timegrid/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/js/vendor/calender_js/list/main.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/css/jquery.ez-plus.css')}}">
 
 @endsection
 
@@ -52,11 +52,11 @@
 
 @section('js')
 
-    <script src="{{asset('public/frontend/infixlmstheme/js/class_details.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/videopopup.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/video.popup.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/jquery.nice-number.min.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/jquery.ez-plus.js') }}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/class_details.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/videopopup.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/video.popup.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/jquery.nice-number.min.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/jquery.ez-plus.js') }}"></script>
 
     <script>
 

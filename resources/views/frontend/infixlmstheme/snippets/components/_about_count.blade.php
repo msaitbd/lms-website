@@ -4,7 +4,7 @@
     <style>
         .counter_area::before {
             display: none;
-            background-image: url('{{asset('public/frontend/infixlmstheme/img/about/counter_bg.png')}}');
+            background-image: url('{{asset('frontend/infixlmstheme/img/about/counter_bg.png')}}');
         }
 
         .right-0 {
@@ -14,7 +14,7 @@
     <div class="counter_area">
         <div class="w-auto h-100 position-absolute bottom-0 right-0 ">
             <img class="w-auto h-100 img-cover"
-                 src="{{asset('public/frontend/infixlmstheme/img/about/counter_bg.png')}}" alt="">
+                 src="{{asset('frontend/infixlmstheme/img/about/counter_bg.png')}}" alt="">
         </div>
         <div class="container">
             <div class="row">

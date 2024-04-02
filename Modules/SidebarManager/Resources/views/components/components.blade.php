@@ -3,7 +3,7 @@
 
 
     @push('styles')
-        <link href="{{asset('public/backend/vendors/nestable/jquery.nestable.min.css')}}" rel="stylesheet">
+        <link href="{{asset('backend/vendors/nestable/jquery.nestable.min.css')}}" rel="stylesheet">
         <link href="{{asset('Modules/SidebarManager/Resources/assets/css/sidebar.css')}}" rel="stylesheet">
 
 
@@ -162,7 +162,7 @@
 
 
     @push('scripts')
-        <script src="{{asset('public/backend/vendors/nestable/jquery.nestable.min.js')}}"></script>
+        <script src="{{asset('backend/vendors/nestable/jquery.nestable.min.js')}}"></script>
         <script src="{{asset('Modules/SidebarManager/Resources/assets/js/sidebar.js')}}"></script>
     @endpush
 

@@ -130,7 +130,7 @@
     <input type="hidden" value="{{route('staffs.document.remove',':id')}}" id="staff_document_remove_url">
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/repeater/repeater.js')}}"></script>
-    <script src="{{asset('public/backend/js/repeater/indicator-repeater.js')}}"></script>
-    <script src="{{asset('public/backend/js/staff_document.js')}}"></script>
+    <script src="{{asset('backend/js/repeater/repeater.js')}}"></script>
+    <script src="{{asset('backend/js/repeater/indicator-repeater.js')}}"></script>
+    <script src="{{asset('backend/js/staff_document.js')}}"></script>
 @endpush

@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{asset('public/backend/css/role_module_style.css')}}">
+    <link rel="stylesheet" href="{{asset('backend/css/role_module_style.css')}}">
 @endpush
 @section('mainContent')
     <style>
@@ -69,5 +69,5 @@
     {{ Form::close() }}
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/permission.js')}}"></script>
+    <script src="{{asset('backend/js/permission.js')}}"></script>
 @endpush

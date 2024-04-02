@@ -10,7 +10,7 @@
             <div class="row">
                 <div class="col-6">
                     <img class="profile_delete_photo"
-                         src="{{asset('public/frontend/infixlmstheme/img/account/delete_account.png')}}" alt="photo">
+                         src="{{asset('frontend/infixlmstheme/img/account/delete_account.png')}}" alt="photo">
                 </div>
                 <div class="col-6" style="padding-top:10% ; ">
                     <div class="account_title">

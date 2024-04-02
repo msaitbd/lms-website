@@ -3,7 +3,7 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('blog.Add Post')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/backend/css/summernote-bs4.min.css/')}}{{assetVersion()}}" rel="stylesheet">
+    <link href="{{asset('backend/css/summernote-bs4.min.css/')}}{{assetVersion()}}" rel="stylesheet">
     <link rel="stylesheet"
           href="{{asset('Modules/Blog/Resources/views/assets/taginput/tagsinput.css')}}{{assetVersion()}}"/>
     <link rel="stylesheet" href="{{asset('Modules/Blog/Resources/views/assets/frontend.css')}}{{assetVersion()}}"/>
@@ -24,7 +24,7 @@
     </style>
 @endsection
 @section('js')
-    <script src="{{asset('public/backend/js/summernote-bs4.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/summernote-bs4.min.js')}}{{assetVersion()}}"></script>
     <script src="{{asset('Modules/Blog/Resources/views/assets/taginput/tagsinput.js')}}{{assetVersion()}}"></script>
     <script src="{{asset('Modules/Blog/Resources/views/assets/frontend.js')}}{{assetVersion()}}"></script>
 

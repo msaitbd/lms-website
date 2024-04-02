@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/plugins/drawflow/drawflow.css')}}">
+<link rel="stylesheet" href="{{asset('frontend/infixlmstheme/plugins/drawflow/drawflow.css')}}">
 
 <div id="matchingQus{{$qusBank->id}}" ondrop="drop(event)"
      ondragover="allowDrop(event)"
@@ -8,7 +8,7 @@
 </div>
 <input type="hidden" value="" name="matching_connection[{{$qusBank->id}}]" id="matching_connection_{{$qusBank->id}}">
 
-<script src="{{asset('public/frontend/infixlmstheme/plugins/drawflow/drawflow.js')}}"></script>
+<script src="{{asset('frontend/infixlmstheme/plugins/drawflow/drawflow.js')}}"></script>
 
 
 <script>

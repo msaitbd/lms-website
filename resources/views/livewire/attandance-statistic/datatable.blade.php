@@ -172,7 +172,7 @@
             @endisset
         </x-livewire-tables::wrapper>
     </div>
-    <script src="{{asset('public/backend/vendors/chartlist/Chart.min.js')}}"></script>
+    <script src="{{asset('backend/vendors/chartlist/Chart.min.js')}}"></script>
     <script>
 
         let attendance_rate_chart = new Chart(document.getElementById('course_overview2').getContext('2d'), {

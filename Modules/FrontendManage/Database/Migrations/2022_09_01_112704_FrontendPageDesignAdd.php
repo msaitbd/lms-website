@@ -22,7 +22,7 @@ class FrontendPageDesignAdd extends Migration
 
     public function container($details, $title = '', $subtitle = '')
     {
-        $imagePath = asset('public/frontend/infixlmstheme/img/banner/bradcam_bg_1.jpg');
+        $imagePath = asset('frontend/infixlmstheme/img/banner/bradcam_bg_1.jpg');
 
         $html = "
     <div class='row'>

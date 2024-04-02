@@ -362,5 +362,5 @@
     @include('backend.partials.delete_modal')
 @endsection
 @push('scripts')
-    <script src="{{ asset('public/backend/js/currency.js') }}"></script>
+    <script src="{{ asset('backend/js/currency.js') }}"></script>
 @endpush

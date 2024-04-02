@@ -29,15 +29,15 @@
         <iframe src="https://view.officeapps.live.com/op/view.aspx?src={{ asset($lesson->video_url) }}"></iframe>
     @endif
     {{--    @if($lesson->host == 'PowerPoint' || $lesson->host == 'PPT' || $lesson->host == 'PPTX')--}}
-    {{--        <script src="{{asset('public/js/jquery-3.5.1.min.js')}}"></script>--}}
-    {{--        <script src="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/js/jszip.min.js')}}"></script>--}}
-    {{--        <script src="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/filereader.js')}}"></script>--}}
-    {{--        <script src="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/js/d3.min.js')}}"></script>--}}
-    {{--        <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/css/nv.d3.min.css')}}"/>--}}
-    {{--        <script src="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/js/nv.d3.min.js')}}"></script>--}}
-    {{--        <script src="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/js/divs2slides.js')}}"></script>--}}
-    {{--        <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/css/pptxjs.css')}}"/>--}}
-    {{--        <script src="{{asset('public/frontend/infixlmstheme/plugins/pptxjs/js/pptxjs.js')}}"></script>--}}
+    {{--        <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>--}}
+    {{--        <script src="{{asset('frontend/infixlmstheme/plugins/pptxjs/js/jszip.min.js')}}"></script>--}}
+    {{--        <script src="{{asset('frontend/infixlmstheme/plugins/pptxjs/filereader.js')}}"></script>--}}
+    {{--        <script src="{{asset('frontend/infixlmstheme/plugins/pptxjs/js/d3.min.js')}}"></script>--}}
+    {{--        <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/plugins/pptxjs/css/nv.d3.min.css')}}"/>--}}
+    {{--        <script src="{{asset('frontend/infixlmstheme/plugins/pptxjs/js/nv.d3.min.js')}}"></script>--}}
+    {{--        <script src="{{asset('frontend/infixlmstheme/plugins/pptxjs/js/divs2slides.js')}}"></script>--}}
+    {{--        <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/plugins/pptxjs/css/pptxjs.css')}}"/>--}}
+    {{--        <script src="{{asset('frontend/infixlmstheme/plugins/pptxjs/js/pptxjs.js')}}"></script>--}}
 
 
     {{--        <div id="pptPlayer"></div>--}}

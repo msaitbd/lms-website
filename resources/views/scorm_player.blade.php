@@ -4,7 +4,7 @@
     <title>Scorm Player</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="{{asset('public/js/common.js')}}"></script>
+    <script src="{{asset('js/common.js')}}"></script>
     <meta name="_token" content="{!! csrf_token() !!}"/>
     <style>
         iframe {

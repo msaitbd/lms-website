@@ -3,7 +3,7 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('common.Dashboard')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/class_details.css')}}{{assetVersion()}}" rel="stylesheet"/>
 
 @endsection
 
@@ -15,5 +15,5 @@
     @endif
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/class_details.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/class_details.js')}}"></script>
 @endsection

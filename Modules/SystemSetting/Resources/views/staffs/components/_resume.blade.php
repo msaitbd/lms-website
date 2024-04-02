@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @push('styles')
-    <link href="{{asset('public/frontend/infixlmstheme/css/my_invoice.css')}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/my_invoice.css')}}" rel="stylesheet"/>
 @endpush
 
 @section('mainContent')
@@ -150,12 +150,12 @@
 @endsection
 
 @section('js')
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/html2pdf.bundle.js"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/my_invoice.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/html2pdf.bundle.js"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/my_invoice.js') }}"></script>
 @endsection
 
 
 @push('scripts')
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/html2pdf.bundle.js"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/my_invoice.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/html2pdf.bundle.js"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/my_invoice.js') }}"></script>
 @endpush

@@ -16,14 +16,14 @@
 
 @section('mainContent')
 
-    <script src="{{asset('public/frontend/infixlmstheme/js/pdf.min.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/pdfjs-viewer.js')}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/zoom.js')}}"></script>
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/pdfjs-viewer.css')}}"/>
+    <script src="{{asset('frontend/infixlmstheme/js/pdf.min.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/pdfjs-viewer.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/zoom.js')}}"></script>
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/pdfjs-viewer.css')}}"/>
 
     <script>
         var pdfjsLib = window['pdfjs-dist/build/pdf'];
-        pdfjsLib.GlobalWorkerOptions.workerSrc = '{{asset('public/frontend/infixlmstheme/js/pdf.worker.min.js')}}';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '{{asset('frontend/infixlmstheme/js/pdf.worker.min.js')}}';
     </script>
     <div class="w-100  h-100 pdfjs-viewer"
          style="border: none;min-height: 400px"></div>

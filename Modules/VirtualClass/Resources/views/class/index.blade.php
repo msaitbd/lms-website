@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{asset('public/backend/css/class.css')}}"/>
+    <link rel="stylesheet" href="{{asset('backend/css/class.css')}}"/>
 @endpush
 @php
     $table_name='courses';
@@ -1142,6 +1142,6 @@
     </script>>
 
     <script src="{{asset('/')}}/Modules/CourseSetting/Resources/assets/js/course.js"></script>
-    <script src="{{asset('public/backend/js/zoom.js')}}"></script>
+    <script src="{{asset('backend/js/zoom.js')}}"></script>
 
 @endpush

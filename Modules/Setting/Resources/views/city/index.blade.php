@@ -313,5 +313,5 @@
     @include('backend.partials.delete_modal')
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/city.js')}}"></script>
+    <script src="{{asset('backend/js/city.js')}}"></script>
 @endpush

@@ -4,7 +4,7 @@
     {{__('org-subscription.My Plan')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/org-subscription.css')}}{{assetVersion()}}"
+    <link href="{{asset('frontend/infixlmstheme/css/org-subscription.css')}}{{assetVersion()}}"
           rel="stylesheet"/>
     <style>
         .twoLine_ellipsis {
@@ -19,7 +19,7 @@
     </style>
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/my_course.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/my_course.js')}}"></script>
 @endsection
 
 @section('mainContent')

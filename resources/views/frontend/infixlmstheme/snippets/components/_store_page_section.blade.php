@@ -3,8 +3,8 @@
      data-aoraeditor-title="Store Page Section"
      data-aoraeditor-categories="Store Page"
 >
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/css/store_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme/css/select2Store.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/css/store_style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme/css/select2Store.min.css')}}">
     <input type="hidden" class="class_route" name="class_route" value="{{validRouteUrl('store.products')}}">
     <div class="section-padding-medium shop pb-5">
         <div class="container">

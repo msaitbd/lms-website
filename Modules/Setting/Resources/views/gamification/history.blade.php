@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{asset('public/backend/css/student_list.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/css/student_list.css')}}{{assetVersion()}}"/>
 @endpush
 @php
     $table_name='users';

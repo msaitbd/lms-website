@@ -1,8 +1,8 @@
-<script src="{{asset('public/backend/js/plugin.js')}}"></script>
+<script src="{{asset('backend/js/plugin.js')}}"></script>
 
-{{--<script src="{{asset('public/backend/js/jquery-ui.js')}}"></script>--}}
+{{--<script src="{{asset('backend/js/jquery-ui.js')}}"></script>--}}
 @if(isModuleActive('Org'))
-    <script src="{{asset('public/js/loadingoverlay.min.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('js/loadingoverlay.min.js')}}{{assetVersion()}}"></script>
 @endif
 
 <script>
@@ -18,7 +18,7 @@
 </script>
 
 @if(isModuleActive('Chat'))
-    <script src="{{ asset('public/js/app.js') }}{{assetVersion()}}"></script>
+    <script src="{{ asset('js/app.js') }}{{assetVersion()}}"></script>
 @endif
 
 <script>
@@ -437,14 +437,14 @@
 </script>
 --}}
 
-<script src="{{ asset('public/chat/js/custom.js') }}{{assetVersion()}}"></script>
+<script src="{{ asset('chat/js/custom.js') }}{{assetVersion()}}"></script>
 @if(isModuleActive("WhatsappSupport"))
-    <script src="{{ asset('public/whatsapp-support/scripts.js') }}{{assetVersion()}}"></script>
+    <script src="{{ asset('whatsapp-support/scripts.js') }}{{assetVersion()}}"></script>
 @endif
 <!-- Load Uppy JS bundle. -->
-<script src="{{ asset('public/vendor/uppy/uppy.min.js') }}"></script>
-<script src="{{ asset('public/vendor/uppy/uppy.legacy.min.js') }}"></script>
-<script src="{{ asset('public/vendor/uppy/ru_RU.min.js') }}"></script>
+<script src="{{ asset('vendor/uppy/uppy.min.js') }}"></script>
+<script src="{{ asset('vendor/uppy/uppy.legacy.min.js') }}"></script>
+<script src="{{ asset('vendor/uppy/ru_RU.min.js') }}"></script>
 
 @stack('scripts')
 <script>

@@ -3,7 +3,7 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{ $course->title}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/full_screen.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/full_screen.css')}}{{assetVersion()}}" rel="stylesheet"/>
     <style>
         .default-font {
             font-family: "Jost", sans-serif;
@@ -226,10 +226,10 @@
                     </script>
                 @endpush
             @else
-                <link href="{{ asset('public/frontend/infixlmstheme/plugins/css/jquery.mb.YTPlayer.min.css') }}"
+                <link href="{{ asset('frontend/infixlmstheme/plugins/css/jquery.mb.YTPlayer.min.css') }}"
                       media="all" rel="stylesheet" type="text/css">
 
-                <script src="{{ asset('public/frontend/infixlmstheme/plugins/jquery.mb.YTPlayer.js') }}"></script>
+                <script src="{{ asset('frontend/infixlmstheme/plugins/jquery.mb.YTPlayer.js') }}"></script>
 
                 <div class="video_iframe" id="video-id"
                      data-property="{videoURL:'http://youtu.be/{{ $youtube_url }}',containment:'self',   mute:false, startAt:0, loop:false, opacity:1,seekbar:{{ Settings('show_seek_bar') ? 'true' : 'false' }}}">
@@ -414,7 +414,7 @@
         @endif
     @endif
 
-    <script src="{{ asset('public/frontend/infixlmstheme/js/class_details.js') }}"></script>
-    <script src="{{ asset('public/frontend/infixlmstheme/js/full_screen_video.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/class_details.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/full_screen_video.js') }}"></script>
 
 @endpush

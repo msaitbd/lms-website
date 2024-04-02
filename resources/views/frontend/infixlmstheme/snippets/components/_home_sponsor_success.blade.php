@@ -11,7 +11,7 @@
         }
 
         .about-inner {
-            background: rgba(0, 0, 0, 0.86) url('{{asset('public/frontend/infixlmstheme/img/shape/about-bg-shape.png')}}') no-repeat center;
+            background: rgba(0, 0, 0, 0.86) url('{{asset('frontend/infixlmstheme/img/shape/about-bg-shape.png')}}') no-repeat center;
             padding: 80px 0px
         }
 

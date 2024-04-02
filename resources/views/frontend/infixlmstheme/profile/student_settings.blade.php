@@ -3,13 +3,13 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('profile.profile')}}
 @endsection
 @section('css')
-    <link href="{{asset('public/frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/checkout.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link href="{{asset('public/frontend/infixlmstheme/css/myProfile.css')}}{{assetVersion()}}" rel="stylesheet"/>
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/gijgo.min.css{{assetVersion()}}">
+    <link href="{{asset('frontend/infixlmstheme/css/select2.min.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/checkout.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link href="{{asset('frontend/infixlmstheme/css/myProfile.css')}}{{assetVersion()}}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/gijgo.min.css{{assetVersion()}}">
     <link rel="stylesheet"
           href="{{asset('Modules/Blog/Resources/views/assets/taginput/tagsinput.css')}}{{assetVersion()}}"/>
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/student_profile.css')}}{{assetVersion()}}">
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/student_profile.css')}}{{assetVersion()}}">
     <style>
         .lmsSwitch_toggle input:checked + .slider {
             background: #e3e3e3;
@@ -31,23 +31,23 @@
             }
         });
     </script>
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/gijgo.min.js"></script>
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/gijgo.min.js"></script>
     <!-- tag input css -->
-    <script src="{{asset('public/frontend/infixlmstheme/js/select2.min.js')}}"></script>
-    <script src="{{asset('public/backend/js/summernote-bs4.min.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/select2.min.js')}}"></script>
+    <script src="{{asset('backend/js/summernote-bs4.min.js')}}"></script>
     <!-- repeater js -->
-    <script src="{{asset('public/modules/profile/repeater/repeater.js')}}"></script>
-    <script src="{{asset('public/modules/profile/repeater/indicator-repeater.js')}}"></script>
+    <script src="{{asset('modules/profile/repeater/repeater.js')}}"></script>
+    <script src="{{asset('modules/profile/repeater/indicator-repeater.js')}}"></script>
 
     <!-- tag input plugin js -->
     <script src="{{asset('Modules/Blog/Resources/views/assets/taginput/tagsinput.js')}}"></script>
     <!-- education js -->
-    <script src="{{asset('public/modules/profile/education.js')}}"></script>
+    <script src="{{asset('modules/profile/education.js')}}"></script>
     <!-- experience js -->
-    <script src="{{asset('public/modules/profile/experience.js')}}"></script>
+    <script src="{{asset('modules/profile/experience.js')}}"></script>
     <!-- skill js -->
-    <script src="{{asset('public/modules/profile/skill.js')}}"></script>
-    <script src="{{asset('public/modules/profile/common.js')}}"></script>
+    <script src="{{asset('modules/profile/skill.js')}}"></script>
+    <script src="{{asset('modules/profile/common.js')}}"></script>
     <script>
         $(document).ready(function () {
             $('.primary_textarea4').summernote({

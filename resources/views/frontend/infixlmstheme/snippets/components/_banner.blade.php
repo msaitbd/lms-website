@@ -7,7 +7,7 @@
 
         <div class="breadcrumb_img w-100 h-100 position-absolute bottom-0 left-0 ">
             <img class="w-100 h-100 img-cover"
-                 src="{{asset('public/frontend/infixlmstheme/img/banner/bradcam_bg_1.jpg')}}" alt="">
+                 src="{{asset('frontend/infixlmstheme/img/banner/bradcam_bg_1.jpg')}}" alt="">
         </div>
         <div class="container">
             <div class="row">

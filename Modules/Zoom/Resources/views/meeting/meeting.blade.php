@@ -1,7 +1,7 @@
 @extends('backend.master')
 
 @push('css')
-    <link rel="stylesheet" href="{{asset('public/backend/css/zoom.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/css/zoom.css')}}{{assetVersion()}}"/>
 @endpush
 
 @section('mainContent')
@@ -19,5 +19,5 @@
 @endsection
 
 @push('scripts')
-    <script src="{{asset('public/backend/js/zoom.js')}}"></script>
+    <script src="{{asset('backend/js/zoom.js')}}"></script>
 @endpush

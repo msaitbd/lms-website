@@ -3,13 +3,13 @@
     {{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('forum.Forum')}}
 @endsection
 @section('css')
-    <link rel="stylesheet" href="{{asset('public/frontend/infixlmstheme/css/forum.css')}}{{assetVersion()}}">
-    <link href="{{asset('public/backend/css/summernote-bs4.min.css/')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('frontend/infixlmstheme/css/forum.css')}}{{assetVersion()}}">
+    <link href="{{asset('backend/css/summernote-bs4.min.css/')}}" rel="stylesheet">
 
 @endsection
 @section('js')
-    <script src="{{asset('public/frontend/infixlmstheme/js/forum.js')}}"></script>
-    <script src="{{asset('public/backend/js/summernote-bs4.min.js')}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/forum.js')}}"></script>
+    <script src="{{asset('backend/js/summernote-bs4.min.js')}}"></script>
     <script>
         $(document).ready(function () {
             $('.forum_reply').summernote({

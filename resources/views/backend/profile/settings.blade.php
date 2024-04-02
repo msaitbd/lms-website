@@ -233,18 +233,18 @@
         });
     </script>
     <!-- repeater js -->
-    <script src="{{asset('public/modules/profile/repeater/repeater.js')}}{{assetVersion()}}"></script>
-    <script src="{{asset('public/modules/profile/repeater/indicator-repeater.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/profile/repeater/repeater.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/profile/repeater/indicator-repeater.js')}}{{assetVersion()}}"></script>
 
     <!-- tag input plugin js -->
     <script src="{{asset('Modules/Blog/Resources/views/assets/taginput/tagsinput.js')}}{{assetVersion()}}"></script>
     <!-- education js -->
-    <script src="{{asset('public/modules/profile/education.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/profile/education.js')}}{{assetVersion()}}"></script>
     <!-- experience js -->
-    <script src="{{asset('public/modules/profile/experience.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/profile/experience.js')}}{{assetVersion()}}"></script>
     <!-- skill js -->
-    <script src="{{asset('public/modules/profile/skill.js')}}{{assetVersion()}}"></script>
-    <script src="{{asset('public/modules/profile/common.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/profile/skill.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('modules/profile/common.js')}}{{assetVersion()}}"></script>
     <script>
 
         (function ($) {

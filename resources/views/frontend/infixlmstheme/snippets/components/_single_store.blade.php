@@ -116,7 +116,7 @@
             <div class="col-lg-12 mb-4 mt-5">
                 <div class="Nocouse_wizged text-center d-flex align-items-center justify-content-center">
                     <div class="thumb">
-                        <img style="width: 50px" src="{{ asset('public/frontend/infixlmstheme') }}/img/not-found.png"
+                        <img style="width: 50px" src="{{ asset('frontend/infixlmstheme') }}/img/not-found.png"
                              alt="">
                     </div>
                     <h1>

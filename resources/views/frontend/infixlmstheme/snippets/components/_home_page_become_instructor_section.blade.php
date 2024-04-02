@@ -26,7 +26,7 @@
                         <div class="col-lg-6">
                             <div class="single_cta_service mb_30">
                                 <div class="thumb">
-                                    <img src="{{asset('public/frontend/infixlmstheme/img/services/2.png')}}" alt="">
+                                    <img src="{{asset('frontend/infixlmstheme/img/services/2.png')}}" alt="">
                                 </div>
                                 <div class="cta_service_info">
                                     <h4>InfixEdu for Business.</h4>

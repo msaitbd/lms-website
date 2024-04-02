@@ -13,16 +13,16 @@
     <x-frontend-dynamic-style-color/>
 
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/app.css{{assetVersion()}}">
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/frontend_style.css{{assetVersion()}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/app.css{{assetVersion()}}">
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/frontend_style.css{{assetVersion()}}">
 
-    <script src="{{asset('public/js/common.js')}}{{assetVersion()}}"></script>
-    <script src="{{asset('public/frontend/infixlmstheme/js/app.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('js/common.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('frontend/infixlmstheme/js/app.js')}}{{assetVersion()}}"></script>
 
-    <link rel="stylesheet" href="{{ asset('public/frontend/infixlmstheme') }}/css/gijgo.min.css{{assetVersion()}}">
-    <script src="{{ asset('public/frontend/infixlmstheme') }}/js/gijgo.min.js{{assetVersion()}}"></script>
-    <link rel="stylesheet" href="{{asset('public/backend/css/themify-icons.css')}}{{assetVersion()}}"/>
-    <link rel="stylesheet" href="{{asset('public/css/preloader.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{ asset('frontend/infixlmstheme') }}/css/gijgo.min.css{{assetVersion()}}">
+    <script src="{{ asset('frontend/infixlmstheme') }}/js/gijgo.min.js{{assetVersion()}}"></script>
+    <link rel="stylesheet" href="{{asset('backend/css/themify-icons.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('css/preloader.css')}}{{assetVersion()}}"/>
 
     <script>
         window._locale = '{{ app()->getLocale() }}';

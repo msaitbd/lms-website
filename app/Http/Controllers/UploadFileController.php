@@ -28,7 +28,7 @@ class UploadFileController extends Controller
             foreach ($file as $k => $f) {
                 $fileName = $f->getClientOriginalName() . time() . "." . $f->getClientOriginalExtension();
                 $f->move('public/uploads/editor-image/', $fileName);
-                $image_url[$k] = asset('public/uploads/editor-image/' . $fileName);
+                $image_url[$k] = asset('uploads/editor-image/' . $fileName);
             }
         }
 

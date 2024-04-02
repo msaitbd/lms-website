@@ -1,5 +1,5 @@
-<script src="{{asset('public/modules/profile/repeater/repeater.js')}}"></script>
-<script src="{{asset('public/modules/profile/repeater/indicator-repeater.js')}}"></script>
+<script src="{{asset('modules/profile/repeater/repeater.js')}}"></script>
+<script src="{{asset('modules/profile/repeater/indicator-repeater.js')}}"></script>
 
 <div class="modal fade admin-query" id="payout_account_modal">
     <div class="modal-dialog modal_800px modal-dialog-centered">

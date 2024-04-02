@@ -145,5 +145,5 @@
 @endsection
 
 @push('scripts')
-    <script src="{{asset('public/backend/js/zoom.js')}}"></script>
+    <script src="{{asset('backend/js/zoom.js')}}"></script>
 @endpush

@@ -2,7 +2,7 @@
 @section('title'){{Settings('site_title')  ? Settings('site_title')  : 'Infix LMS'}} | {{__('certificate.Certificate')}} @endsection
 @section('css') @endsection
 @section('js')
-    <script src="{{ asset('public/frontend/infixlmstheme/js/classes.js') }}"></script>
+    <script src="{{ asset('frontend/infixlmstheme/js/classes.js') }}"></script>
 @endsection
 @section('mainContent')
 

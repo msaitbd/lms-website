@@ -117,16 +117,16 @@
                                                                 @if(isset($question['isSubmit']))
                                                                     @if(isset($question['isWrong']) &&  $question['isWrong'])
                                                                         <img
-                                                                            src="{{asset('public/frontend/infixlmstheme/img/course_details/wrong.png')}}"
+                                                                            src="{{asset('frontend/infixlmstheme/img/course_details/wrong.png')}}"
                                                                             alt="">
                                                                     @else
                                                                         <img
-                                                                            src="{{asset('public/frontend/infixlmstheme/img/course_details/correct.png')}}"
+                                                                            src="{{asset('frontend/infixlmstheme/img/course_details/correct.png')}}"
                                                                             alt="">
                                                                     @endif
                                                                 @else
                                                                     <img
-                                                                        src="{{asset('public/frontend/infixlmstheme/img/course_details/wrong.png')}}"
+                                                                        src="{{asset('frontend/infixlmstheme/img/course_details/wrong.png')}}"
                                                                         alt="">
                                                                 @endif
                                                             </div>

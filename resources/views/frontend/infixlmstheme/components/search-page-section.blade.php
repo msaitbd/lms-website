@@ -193,7 +193,7 @@
                                     <h1>
                                         <div class="thumb">
                                             <img style="width: 50px"
-                                                 src="{{ asset('public/frontend/infixlmstheme') }}/img/not-found.png"
+                                                 src="{{ asset('frontend/infixlmstheme') }}/img/not-found.png"
                                                  alt="">
                                             @if(!isset($search))
                                                 {{__('frontend.No Course Found')}}

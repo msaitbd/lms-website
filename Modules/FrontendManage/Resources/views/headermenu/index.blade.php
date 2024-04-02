@@ -1,8 +1,8 @@
 @extends('backend.master')
 @section('mainContent')
     @push('styles')
-        <link href="{{asset('public/backend/vendors/nestable/jquery.nestable.min.css')}}" rel="stylesheet">
-        <link href="{{asset('public/backend/css/headermenu.css')}}" rel="stylesheet">
+        <link href="{{asset('backend/vendors/nestable/jquery.nestable.min.css')}}" rel="stylesheet">
+        <link href="{{asset('backend/css/headermenu.css')}}" rel="stylesheet">
         <style>
             .dd-handle .float-left {
                 width: calc(100% - 80px);
@@ -80,7 +80,7 @@
         {{-- Delete Modal End --}}
     </section>
     @push('scripts')
-        <script src="{{asset('public/backend/vendors/nestable/jquery.nestable.min.js')}}"></script>
-        <script src="{{asset('public/backend/js/headermenu.js')}}"></script>
+        <script src="{{asset('backend/vendors/nestable/jquery.nestable.min.js')}}"></script>
+        <script src="{{asset('backend/js/headermenu.js')}}"></script>
     @endpush
 @endsection

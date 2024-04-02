@@ -4,7 +4,7 @@
         frameborder="0" controls=0></iframe>
 <script src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 
-    <script src="{{asset('public/js/jquery-3.5.1.min.js')}}"></script>
+    <script src="{{asset('js/jquery-3.5.1.min.js')}}"></script>
     <script src='https://player.vimeo.com/api/player.js'></script>
     <script>
         $(function () {

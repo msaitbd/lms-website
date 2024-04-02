@@ -468,7 +468,7 @@
                                                             <div class="thumb">
                                                                 <a href="{{courseDetailsUrl(@$r->id,@$r->type,@$r->slug)}}">
                                                                     <img class="w-100"
-                                                                         src="{{ file_exists($r->thumbnail) ? asset($r->thumbnail) : asset('public/\uploads/course_sample.png') }}"
+                                                                         src="{{ file_exists($r->thumbnail) ? asset($r->thumbnail) : asset('\uploads/course_sample.png') }}"
                                                                          alt="">
 
 

@@ -193,7 +193,7 @@
                                     <h1>
                                         <div class="thumb">
                                             <img style="width: 50px"
-                                                 src="{{ asset('public/frontend/infixlmstheme') }}/img/not-found.png"
+                                                 src="{{ asset('frontend/infixlmstheme') }}/img/not-found.png"
                                                  alt="">
                                             {{__('frontend.No Course or Ebook Found')}}
                                         </div>

@@ -149,7 +149,7 @@
             width: 100%;
             height: 100%;
             border-radius: 20px;
-            background: rgba(0, 0, 0, 0.4) url({{asset('public/frontend/infixlmstheme/img/shape/reward-bg.jpg')}}) no-repeat center;
+            background: rgba(0, 0, 0, 0.4) url({{asset('frontend/infixlmstheme/img/shape/reward-bg.jpg')}}) no-repeat center;
             background-size: cover;
             z-index: -2;
             border-radius: 20px;

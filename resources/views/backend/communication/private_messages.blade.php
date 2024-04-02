@@ -1,6 +1,6 @@
 @extends('backend.master')
 @push('styles')
-    <link rel="stylesheet" href="{{asset('public/backend/css/communication.css')}}{{assetVersion()}}"/>
+    <link rel="stylesheet" href="{{asset('backend/css/communication.css')}}{{assetVersion()}}"/>
 @endpush
 @section('mainContent')
 
@@ -99,5 +99,5 @@
 
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/communication.js')}}{{assetVersion()}}"></script>
+    <script src="{{asset('backend/js/communication.js')}}{{assetVersion()}}"></script>
 @endpush

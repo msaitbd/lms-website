@@ -262,7 +262,7 @@
            value="{{route('online_exam_question_assign_by_ajax')}}">
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/manage_quiz.js')}}"></script>
+    <script src="{{asset('backend/js/manage_quiz.js')}}"></script>
     <script>
 
     </script>

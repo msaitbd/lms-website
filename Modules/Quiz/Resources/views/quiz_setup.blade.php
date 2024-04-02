@@ -429,7 +429,7 @@
     @include('backend.partials.delete_modal')
 @endsection
 @push('scripts')
-    <script src="{{asset('public/backend/js/manage_quiz.js').assetVersion()}}"></script>
+    <script src="{{asset('backend/js/manage_quiz.js').assetVersion()}}"></script>
     @if($advance)
         <script>
             $(".advance_quiz").find('.white-box').height($(".general_quiz").find('.white-box').height());
