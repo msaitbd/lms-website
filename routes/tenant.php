@@ -8,7 +8,6 @@ use Modules\FrontendManage\Entities\LoginPage;
 
 Auth::routes(['verify' => true]);
 
-
 Route::get('send-password-reset-link', 'Auth\ForgotPasswordController@SendPasswordResetLink')->name('SendPasswordResetLink');
 Route::get('reset-password', 'Auth\ForgotPasswordController@ResetPassword')->name('ResetPassword');
 Route::get('register', 'Auth\RegisterController@RegisterForm')->name('register');
@@ -32,7 +31,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/offline', 'WebsiteController@offline')->name('offline');
     Route::get('/app-mode', 'WebsiteController@onlyAppMode')->name('onlyAppMode');
 
-//    Route::get('/footer/page/{slug}', 'WebsiteController@page')->name('dynamic.page');
+    //    Route::get('/footer/page/{slug}', 'WebsiteController@page')->name('dynamic.page');
     Route::get('/about-us', 'WebsiteController@aboutData')->name('about');
     Route::get('/contact-us', 'WebsiteController@contact')->name('contact');
     Route::post('/contact-submit', 'WebsiteController@contactMsgSubmit')->name('contactMsgSubmit');
@@ -107,7 +106,7 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::get('/course/subscription/{plan_id}', 'WebsiteController@subscriptionCourseList')->name('subscriptionCourseList');
     Route::get('/course-subscription/checkout', 'WebsiteController@subscriptionCheckout')->name('courseSubscriptionCheckout')->middleware(['auth']);
     Route::get('/subscription-courses', 'WebsiteController@subscriptionCourses')->name('subscriptionCourses');
-//    Route::get('/bundle-subscription-courses', 'WebsiteController@bundleSubscriptionCourses')->name('bundleSubscriptionCourses');
+    //    Route::get('/bundle-subscription-courses', 'WebsiteController@bundleSubscriptionCourses')->name('bundleSubscriptionCourses');
     Route::get('/continue-course/{slug}', 'WebsiteController@continueCourse')->name('continueCourse');
 
     //saas module
@@ -127,15 +126,12 @@ Route::group(['namespace' => 'Frontend'], function () {
     Route::post('comment-delete/{id}', 'CommentController@deleteComment')->name('deleteComment')->middleware('auth');
     Route::post('review-delete/{id}', 'CommentController@deleteReview')->name('deleteReview')->middleware('auth');
     Route::post('comment-replay-delete/{id}', 'CommentController@deleteCommnetReply')->name('deleteCommentReply')->middleware('auth');
-
-
 });
 Route::group(['prefix' => 'saas', 'middleware' => ['auth']], function () {
     Route::post('payment', 'SaasPaymentController@payment')->name('saasPayment');
     Route::post('submit', 'SaasPaymentController@subscriptionSubmit')->name('saasSubmit');
     Route::get('paypalSaasSuccess', 'SaasPaymentController@paypalSubscriptionSuccess')->name('paypalSaasSuccess');
     Route::get('paypalSaasFailed', 'SaasPaymentController@paypalSubscriptionFailed')->name('paypalSaasFailed');
-
 });
 
 Route::group(['namespace' => 'Frontend', 'middleware' => ['auth']], function () {
@@ -200,8 +196,6 @@ Route::group(['namespace' => 'Frontend', 'middleware' => ['student']], function 
     Route::get('my-skill', 'StudentSkillController@mySkill')->name('mySkill');
 
     Route::get('getCommentsReply', 'CommentController@getCommentsReply')->name('getCommentsReply');
-
-
 });
 Route::group(['middleware' => ['student']], function () {
     Route::get('my-notification-setup', 'NotificationController@myNotificationSetup')->name('myNotificationSetup');
@@ -227,7 +221,6 @@ Route::group(['prefix' => 'deposit', 'middleware' => ['auth']], function () {
     Route::post('submit', 'DepositController@depositSubmit')->name('depositSubmit');
     Route::get('paypalDepositSuccess', 'DepositController@paypalDepositSuccess')->name('paypalDepositSuccess');
     Route::get('paypalDepositFailed', 'DepositController@paypalDepositFailed')->name('paypalDepositFailed');
-
 });
 
 Route::group(['prefix' => 'subscription', 'middleware' => ['auth']], function () {
@@ -235,7 +228,6 @@ Route::group(['prefix' => 'subscription', 'middleware' => ['auth']], function ()
     Route::post('submit', 'SubscriptionPaymentController@subscriptionSubmit')->name('subscriptionSubmit');
     Route::get('paypalSubscriptionSuccess', 'SubscriptionPaymentController@paypalSubscriptionSuccess')->name('paypalSubscriptionSuccess');
     Route::get('paypalSubscriptionFailed', 'SubscriptionPaymentController@paypalSubscriptionFailed')->name('paypalSubscriptionFailed');
-
 });
 
 
@@ -253,7 +245,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('ajaxNotificationMakeRead', 'NotificationController@ajaxNotificationMakeRead')->name('ajaxNotificationMakeRead');
     Route::get('NotificationMakeAllRead', 'NotificationController@NotificationMakeAllRead')->name('NotificationMakeAllRead');
     Route::get('notification-delete/{id}', 'NotificationController@delete')->name('notificationDelete');
-
 });
 Route::get('fullscreen-view/{course_id}/{lesson_id}', 'Frontend\WebsiteController@fullScreenView')->name('fullScreenView');
 
@@ -268,7 +259,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.', 'mi
 
     Route::get('/reveune-list', 'AdminController@reveuneList')->name('reveuneList')->middleware('RoutePermissionCheck:admin.reveuneList');
     Route::get('/reveuneListInstructor', 'AdminController@reveuneListInstructor')->name('reveuneListInstructor')->middleware('RoutePermissionCheck:admin.reveuneListInstructor');
-//
+    //
     Route::get('/enrol-list', 'AdminController@enrollLogs')->name('enrollLogs')->middleware('RoutePermissionCheck:admin.enrollLogs');
     Route::get('/cancel-list', 'AdminController@cancelLogs')->name('cancelLogs')->middleware('RoutePermissionCheck:admin.enrollLogs');
 
@@ -284,8 +275,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'admin', 'as' => 'admin.', 'mi
     Route::get('/all/enrol-list-data', 'AdminController@getEnrollLogsData')->name('getEnrollLogsData')->middleware('RoutePermissionCheck:admin.enrollLogs');
     Route::get('/all/cancel-list-data', 'AdminController@getCancelLogsData')->name('getCancelLogsData')->middleware('RoutePermissionCheck:admin.enrollLogs');
     Route::get('/all/payout-data', 'AdminController@getPayoutData')->name('getPayoutData');
-
-
 });
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'refund', 'as' => 'refund.', 'middleware' => ['auth', 'admin']], function () {
@@ -293,7 +282,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'refund', 'as' => 'refund.', '
     Route::post('settings', 'RefundController@settingsUpdate')->name('settings.update');
     Route::get('approved/{id}', 'RefundController@approved')->name('approved');
     Route::post('reject', 'RefundController@reject')->name('reject');
-
 });
 
 
@@ -316,8 +304,6 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'course', 'as' => 'course.', '
     Route::post('sub-categories/update', 'CourseController@sub_category_update')->name('subcategory.update')->middleware('RoutePermissionCheck:course.subcategory.edit');
     Route::get('sub-categories/edit/{id}', 'CourseController@sub_category_edit')->name('subcategory.edit')->middleware('RoutePermissionCheck:course.subcategory.edit');
     Route::get('sub-categories/delete/{id}', 'CourseController@sub_category_delete')->name('subcategory.delete')->middleware('RoutePermissionCheck:course.subcategory.delete');
-
-
 });
 Route::get('status-enable-disable', 'AjaxController@statusEnableDisable')->name('statusEnableDisable')->middleware(['auth']);
 
@@ -436,7 +422,6 @@ Route::group(['as' => 'users.', 'prefix' => 'user', 'middleware' => ['auth']], f
 
     Route::get('my-noticeboard', 'MyPanelController@myNoticeboard')->name('myNoticeboard');
     Route::get('show-noticeboard/{id}', 'MyPanelController@showNoticeboard')->name('showNoticeboard');
-
 });
 
 
@@ -482,5 +467,3 @@ Route::get('scorm/video/{lesson_id}/{id}', 'Frontend\WebsiteController@scormPlay
 Route::get('document/video/{lesson_id}', 'Frontend\WebsiteController@documentPlayer')->name('documentPlayer');
 Route::get('get-dynamic-data', 'Frontend\ThemeDynamicData')->name('getDynamicData');
 Route::get('read-some-part-of-books/{id}', 'Frontend\WebsiteController@readSomePartOfBooks')->name('readSomePartOfBooks');
-
-

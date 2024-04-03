@@ -60,20 +60,7 @@ class FrontendHomeController extends Controller
                             }
                         }
                     }
-
                 }
-
-
-//                $client = new Client();
-//                $response = $client->get($url);
-//
-//                if ($response->getStatusCode() == 200) {
-//                    $htmlContent = $response->getBody()->getContents();
-//                    return response($htmlContent)
-//                        ->header('Content-Type', 'text/html');
-//                } else {
-//                    abort(404);
-//                }
             }
             if (hasDynamicPage()) {
                 $row = FrontPage::where('slug', '/')->first();
@@ -106,6 +93,4 @@ class FrontendHomeController extends Controller
     {
         return VersionHistory::select('version', 'release_date')->get()->pluck('version', 'release_date')->toArray();
     }
-
-
 }

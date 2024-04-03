@@ -9,7 +9,7 @@ Route::group(['prefix' => 'frontend', 'as' => 'frontend.', 'middleware' => ['aut
     Route::post('/sponsors/update', 'SponsorController@update')->name('sponsors.update');
     Route::get('/sponsors/destroy/{id}', 'SponsorController@destroy')->name('sponsors.destroy');
 
-//sliders
+    //sliders
     Route::resource('/sliders', 'SliderController')->except('show', 'update', 'destroy');
     Route::post('/sliders/update', 'SliderController@update')->name('sliders.update');
     Route::get('/sliders/destroy/{id}', 'SliderController@destroy')->name('sliders.destroy');
@@ -113,7 +113,6 @@ Route::group(['prefix' => 'frontend', 'as' => 'frontend.', 'middleware' => ['aut
     Route::get('/custom-css-js', 'CustomStyleScriptController@index')->name('customJsCss')
         ->middleware('RoutePermissionCheck:frontend.customJsCss');
     Route::post('/custom-css-js', 'CustomStyleScriptController@store');
-
 });
 Route::prefix('admin/blogs')->name('blogs.comments.')->middleware(['auth'])->group(function () {
     Route::get('comments', 'BlogCommentController@index')->name('index');
