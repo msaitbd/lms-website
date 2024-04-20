@@ -284,6 +284,10 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'refund', 'as' => 'refund.', '
     Route::post('reject', 'RefundController@reject')->name('reject');
 });
 
+Route::prefix('bkashpayment')->middleware(['auth', 'admin'])->group(function () {
+    Route::resource('bkashPayment', 'BkashPaymentCotroller');
+});
+
 
 Route::group(['namespace' => 'Admin', 'prefix' => 'course', 'as' => 'course.', 'middleware' => ['auth', 'admin']], function () {
 
@@ -305,6 +309,7 @@ Route::group(['namespace' => 'Admin', 'prefix' => 'course', 'as' => 'course.', '
     Route::get('sub-categories/edit/{id}', 'CourseController@sub_category_edit')->name('subcategory.edit')->middleware('RoutePermissionCheck:course.subcategory.edit');
     Route::get('sub-categories/delete/{id}', 'CourseController@sub_category_delete')->name('subcategory.delete')->middleware('RoutePermissionCheck:course.subcategory.delete');
 });
+
 Route::get('status-enable-disable', 'AjaxController@statusEnableDisable')->name('statusEnableDisable')->middleware(['auth']);
 
 Route::group(['middleware' => ['auth']], function () {
@@ -317,6 +322,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('admin/user-delete-request/delete', 'DeleteUserRequestManageController@destroy')->name('admin.user_delete_request.destroy');
     Route::post('admin/user-delete-request/reject', 'DeleteUserRequestManageController@reject')->name('admin.user_delete_request.reject');
 });
+
 //Route::post('get-user-by-role', 'UserController@getUsersByRole')->name('getUsersByRole')->middleware('auth');
 
 //user profile

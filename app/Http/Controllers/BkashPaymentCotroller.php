@@ -9,6 +9,14 @@ use Illuminate\Support\Facades\Auth;
 
 class BkashPaymentCotroller extends Controller
 {
+
+    public function index()
+    {
+        $payments = BkashPaymentRequest::latest()->paginate(10);
+        return view('bkashPayment.index', compact('payments'));
+
+    }
+
     public function store(Request $request)
     {
         try {
