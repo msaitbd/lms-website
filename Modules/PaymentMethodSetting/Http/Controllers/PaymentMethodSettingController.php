@@ -333,6 +333,18 @@ class PaymentMethodSettingController extends Controller
                     Toastr::error("Something went wrong", 'Failed');
                     return redirect()->back();
                 }
+            } elseif ($method->method == 'Bkash Payment') {
+                try {
+                    $method_setup = PaymentMethodCredential::firstOrNew(array('lms_id' => $method->lms_id));
+
+                    $method_setup->B_ACCOUNT_MESSAGE = trim($request->b_account_message);
+                    $method_setup->B_ACCOUNT_TYPE = trim($request->b_account_type);
+                    $method_setup->B_ACCOUNT_NUMBER = trim($request->b_account_number);
+                    $method_setup->save();
+                } catch (\Throwable $th) {
+                    Toastr::error("Something went wrong", 'Failed');
+                    return redirect()->back();
+                }
             } elseif ($method->method == 'Easy Paisa') {
                 try {
                     $method_setup = PaymentMethodCredential::firstOrNew(array('lms_id' => $method->lms_id));

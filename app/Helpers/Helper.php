@@ -77,7 +77,6 @@ if (!function_exists('send_smtp_mail')) {
             $send->to($mail_val['send_to'])->subject($mail_val['subject']);
         });
     }
-
 }
 
 if (!function_exists('sendMailBySendGrid')) {
@@ -88,7 +87,8 @@ if (!function_exists('sendMailBySendGrid')) {
         $email->setSubject($subject);
         $email->addTo($receiver_email, $receiver_email);
         $email->addContent(
-            "text/html", (string)view('partials.email', ['body' => $message])
+            "text/html",
+            (string)view('partials.email', ['body' => $message])
         );
         $sendgrid = new \SendGrid($config->api_key);
         try {
@@ -168,8 +168,6 @@ if (!function_exists('send_email')) {
             Log::error($e->getMessage());
             return false;
         }
-
-
     }
 }
 
@@ -286,7 +284,6 @@ if (!function_exists('fileUpload')) {
 
         $file->move($destination, $fileName);
         return $destination . $fileName;
-
     }
 }
 
@@ -307,14 +304,12 @@ if (!function_exists('fileUpdate')) {
             if ($databaseFile && file_exists($databaseFile)) {
 
                 unlink($databaseFile);
-
             }
         } elseif (!$file and $databaseFile) {
             $fileName = $databaseFile;
         }
 
         return $fileName;
-
     }
 }
 if (!function_exists('showPicName')) {
@@ -341,7 +336,6 @@ if (!function_exists('getSetting')) {
     {
         try {
             return app('getSetting');
-
         } catch (Exception $exception) {
             return false;
         }
@@ -368,8 +362,6 @@ if (!function_exists('youtubeVideo')) {
         } else {
             return $video_url;
         }
-
-
     }
 }
 
@@ -440,7 +432,6 @@ function send_php_mail($receiver_email, $receiver_name, $sender_email, $subject,
     $headers .= "MIME-Version: 1.0\r\n";
     $headers .= "Content-Type: text/html; charset=utf-8\r\n";
     return mail($receiver_email, $subject, $message, $headers);
-
 }
 
 
@@ -499,11 +490,9 @@ if (!function_exists('permissionCheck')) {
                                                     if (in_array($route_name, $allowRoutes)) {
                                                         return true;
                                                     }*/
-
                     } else {
                         $roles = app('permission_list');
                         $role = $roles->where('id', auth()->user()->role_id)->first();
-
                     }
                     if ($role != null && $role->permissions->contains('route', $route_name)) {
                         return TRUE;
@@ -519,7 +508,6 @@ if (!function_exists('permissionCheck')) {
                         return FALSE;
                     }
                 }
-
             }
         }
         return FALSE;
@@ -582,7 +570,6 @@ if (!function_exists('getConversations')) {
             $output = '<p class="NoMessageFound">' . $message . '!</p>';
         }
         return $output;
-
     }
 }
 
@@ -596,7 +583,6 @@ if (!function_exists('checkModuleEnable')) {
         } else {
             return false;
         }
-
     }
 }
 
@@ -1602,7 +1588,6 @@ if (!function_exists('getForumImage')) {
         } else {
             return asset(currentTheme() == 'wetech' ? 'public/frontend/wetech/img/default/forum.png' : 'public/assets/course/no_image.png');
         }
-
     }
 }
 if (!function_exists('getBlogImage')) {
@@ -1612,7 +1597,6 @@ if (!function_exists('getBlogImage')) {
             return asset($path);
         } else {
             return asset(currentTheme() == 'wetech' ? 'public/frontend/wetech/img/default/news.png' : 'public/assets/course/no_image.png');
-
         }
     }
 }
@@ -1688,7 +1672,6 @@ if (!function_exists('isAdmin')) {
         } else {
             return false;
         }
-
     }
 }
 
@@ -1800,7 +1783,6 @@ if (!function_exists('putEnvConfigration')) {
         if (is_bool($keyPosition)) {
 
             $str .= $envKey . '="' . $envValue . '"';
-
         } else {
             $endOfLinePosition = strpos($str, "\n", $keyPosition);
             $oldLine = substr($str, $keyPosition, $endOfLinePosition - $keyPosition);
@@ -1814,7 +1796,6 @@ if (!function_exists('putEnvConfigration')) {
         } else {
             return true;
         }
-
     }
 }
 
@@ -1851,7 +1832,6 @@ if (!function_exists('UserEmailNotificationSetup')) {
                 } else {
                     return false;
                 }
-
             } else {
                 return true;
             }
@@ -1875,7 +1855,6 @@ if (!function_exists('UserBrowserNotificationSetup')) {
                 } else {
                     return false;
                 }
-
             } else {
                 return true;
             }
@@ -1900,7 +1879,6 @@ if (!function_exists('UserMobileNotificationSetup')) {
                 } else {
                     return false;
                 }
-
             } else {
                 return true;
             }
@@ -1945,7 +1923,6 @@ if (!function_exists('send_browser_notification')) {
             ];
             Notification::send($user, new GeneralNotification($details));
         }
-
     }
 }
 
@@ -1981,7 +1958,6 @@ if (!function_exists('send_mobile_notification')) {
 
             PushNotificationJob::dispatch($title, $message, $user->device_token, $id, $notify_type);
         }
-
     }
 }
 
@@ -2063,16 +2039,12 @@ if (!function_exists('getPriceFormat')) {
             }
             if ($type == 1) {
                 $result = $symbol . $price;
-
             } elseif ($type == 2) {
                 $result = $symbol . ' ' . $price;
-
             } elseif ($type == 3) {
                 $result = $price . $symbol;
-
             } elseif ($type == 4) {
                 $result = $price . ' ' . $symbol;
-
             } else {
                 $result = $price;
             }
@@ -2091,7 +2063,6 @@ if (!function_exists('getPriceFormat')) {
         } else {
             return $result;
         }
-
     }
 }
 
@@ -2131,7 +2102,6 @@ if (!function_exists('theme')) {
         } else {
             return 'frontend.infixlmstheme' . '.' . $fileName;
         }
-
     }
 }
 
@@ -2150,7 +2120,6 @@ if (!function_exists('themeAsset')) {
         } catch (\Exception $e) {
             return '';
         }
-
     }
 }
 
@@ -2158,7 +2127,6 @@ if (!function_exists('backendComponent')) {
     function backendComponent($fileName)
     {
         return 'backend.components.' . $fileName;
-
     }
 }
 
@@ -2282,7 +2250,6 @@ if (!function_exists('isModuleActive')) {
 
             return false;
         }
-
     }
 }
 
@@ -2293,19 +2260,19 @@ if (!function_exists('getPercentageRating')) {
         if ($review_data['total'] > 0) {
             $data['total'] = $review_data['total'] ?? 0;
             switch ($value) {
-                case 1 :
+                case 1:
                     $per = $review_data['1'];
                     break;
-                case 2 :
+                case 2:
                     $per = $review_data['2'];
                     break;
-                case 3 :
+                case 3:
                     $per = $review_data['3'];
                     break;
-                case 4 :
+                case 4:
                     $per = $review_data['4'];
                     break;
-                case 5 :
+                case 5:
                     $per = $review_data['5'];
                     break;
                 default:
@@ -2407,7 +2374,6 @@ function convertCurrency($from_currency, $to_currency, $amount)
             });
 
             return $amount * $rate;
-
         } elseif (Settings('currency_conversion') == 'Exchangerate') {
             $access_key = Settings('exchangerate_access_key');
             if ($from == $to) {
@@ -2431,12 +2397,10 @@ function convertCurrency($from_currency, $to_currency, $amount)
                 $total = $amount;
             }
             return $total;
-
         }
     } catch (\Exception $e) {
     }
     return $amount;
-
 }
 
 if (!function_exists('isRtl')) {
@@ -2465,7 +2429,6 @@ if (!function_exists('getDomainName')) {
         $url_domain = preg_replace("(^http?://)", "", $url_domain);
         $url_domain = str_replace("/", "", $url_domain);
         return $url_domain;
-
     }
 }
 
@@ -2478,7 +2441,6 @@ if (!function_exists('getMenuLink')) {
                 if (substr($menu->link, 0, 1) == '/') {
                     if ($menu->link == "/") {
                         return url($menu->link) . '/';
-
                     }
                     return url($menu->link);
                 }
@@ -2497,31 +2459,25 @@ if (!function_exists('getMenuLink')) {
                 $page = FrontPage::find($element_id);
                 if ($page) {
                     $url = url($page->slug);
-
                 }
             } elseif ($type == "Category") {
                 $url = route('courses') . "?category=" . $element_id;
-
             } elseif ($type == "Sub Category") {
                 $url = route('courses') . "?category=" . $element_id;
-
             } elseif ($type == "Course") {
                 $course = Course::find($element_id);
                 if ($course) {
                     $url = route('courseDetailsView', [$course->id, $course->slug]);
-
                 }
             } elseif ($type == "Quiz") {
                 $course = Course::find($element_id);
                 if ($course) {
                     $url = route('classDetails', [$course->id, $course->slug]);
-
                 }
             } elseif ($type == "Class") {
                 $course = Course::find($element_id);
                 if ($course) {
                     $url = route('courseDetailsView', [$course->id, $course->slug]);
-
                 }
             } elseif ($type == "Custom Link") {
                 $url = '';
@@ -2530,7 +2486,6 @@ if (!function_exists('getMenuLink')) {
 
 
         return $url;
-
     }
 }
 
@@ -2559,7 +2514,6 @@ if (!function_exists('isSubscribe')) {
         }
 
         return false;
-
     }
 }
 
@@ -2583,15 +2537,12 @@ if (!function_exists('userCurrentPlan')) {
                     }
                     return $plan;
                 }
-
-
             }
         } else {
             return null;
         }
 
         return null;
-
     }
 }
 if (!function_exists('hasTable')) {
@@ -2602,7 +2553,6 @@ if (!function_exists('hasTable')) {
         } else {
             return false;
         }
-
     }
 }
 
@@ -2620,7 +2570,6 @@ if (!function_exists('reviewCanDelete')) {
         } else {
             return false;
         }
-
     }
 }
 if (!function_exists('commentCanDelete')) {
@@ -2636,7 +2585,6 @@ if (!function_exists('commentCanDelete')) {
         } else {
             return false;
         }
-
     }
 }
 if (!function_exists('blogCommentCanDelete')) {
@@ -2677,7 +2625,6 @@ if (!function_exists('hasTax')) {
             } else {
                 return false;
             }
-
         }
         return false;
     }
@@ -2718,7 +2665,6 @@ if (!function_exists('applyTax')) {
         $totalPrice = $price + $vatToPay;
 
         return $totalPrice;
-
     }
 }
 if (!function_exists('taxAmount')) {
@@ -2732,7 +2678,6 @@ if (!function_exists('taxAmount')) {
         }
         $vatToPay = ($price / 100) * $vat;
         return $vatToPay;
-
     }
 }
 
@@ -2740,7 +2685,6 @@ if (!function_exists('getPriceAsNumber')) {
     function getPriceAsNumber($price)
     {
         return str_replace(',', '', $price);
-
     }
 }
 
@@ -2753,8 +2697,6 @@ if (!function_exists('currentTheme')) {
         } else {
             return 'infixlmstheme';
         }
-
-
     }
 }
 
@@ -2802,7 +2744,7 @@ if (!function_exists('validationMessage')) {
                     $attr = explode('.', $attribute);
                     $key = $attr[0] ?? '';
                 }
-                $message [$attribute . '.' . $string[0]] = __('validation.' . $key . '.' . $string[0]);
+                $message[$attribute . '.' . $string[0]] = __('validation.' . $key . '.' . $string[0]);
             }
         }
 
@@ -2816,8 +2758,6 @@ if (!function_exists('escapHtmlChar')) {
         $find = ['"', "'"];
         $replace = ['&quot;', '&apos;'];
         return str_replace($find, $replace, htmlspecialchars($str));
-
-
     }
 }
 if (!function_exists('doubleQuotes2singleQuotes')) {
@@ -2826,8 +2766,6 @@ if (!function_exists('doubleQuotes2singleQuotes')) {
         $find = ['"'];
         $replace = ["'"];
         return str_replace($find, $replace, htmlspecialchars($str));
-
-
     }
 }
 
@@ -2856,7 +2794,6 @@ if (!function_exists('checkParent')) {
             $string = $string . '>';
         }
         return $string;
-
     }
 }
 
@@ -2889,7 +2826,6 @@ if (!function_exists('GettingError')) {
         } else {
             abort('500', trans('frontend.Something went wrong, Please check error log'));
         }
-
     }
 }
 
@@ -2908,8 +2844,6 @@ if (!function_exists('isViewable')) {
             }
         }
         return $isViewable;
-
-
     }
 }
 
@@ -2936,7 +2870,6 @@ if (!function_exists('MinuteFormat')) {
             } elseif ($min > 1) {
                 $result .= $min . trans('frontend.Min');
             }
-
         } else {
             if ($hours == 1) {
                 $result .= $hours . ' ' . trans('frontend.Hour');
@@ -2987,7 +2920,6 @@ if (!function_exists('GenerateGeneralSetting')) {
                 $strJsonFileContents = null;
             } else {
                 $strJsonFileContents = file_get_contents($path);
-
             }
             $file_data = json_decode($strJsonFileContents, true);
             $setting_array[$domain] = $settings;
@@ -2998,7 +2930,6 @@ if (!function_exists('GenerateGeneralSetting')) {
             }
             $merged_array = json_encode($merged_array, JSON_PRETTY_PRINT);
             file_put_contents($path, $merged_array);
-
         }
     }
 }
@@ -3086,10 +3017,8 @@ if (!function_exists('getHomeContents')) {
             $row = $all->where('key', $value)->first();
             $result = $row ? $row->getTranslation('value', $lang) : '';
         } catch (\Exception $e) {
-
         }
         return $result;
-
     }
 }
 
@@ -3114,7 +3043,6 @@ if (!function_exists('isBundleValid')) {
                     return true;
                 }
             }
-
         }
 
         return false;
@@ -3165,10 +3093,7 @@ if (!function_exists('orgSubscriptionCourseValidity')) {
                             return false;
                         }
                     }
-
                 }
-
-
             }
         }
 
@@ -3194,7 +3119,6 @@ if (!function_exists('orgSubscriptionCourseSequence')) {
                             }
                         }
                     }
-
                 } else {
                     $end_date = Carbon::parse($cko->start_date)->addDays($cko->days);
                     if ($cko->plan->sequence == 1 && $end_date->format('Y-m-d') > date('Y-m-d')) {
@@ -3203,10 +3127,8 @@ if (!function_exists('orgSubscriptionCourseSequence')) {
                             if ($course->course_id == $courseId) {
                                 $plan_id = $course->plan_id;
                             }
-
                         }
                     }
-
                 }
             }
             if ($plan_id) {
@@ -3219,7 +3141,6 @@ if (!function_exists('orgSubscriptionCourseSequence')) {
                         }
                     }
                 }
-
             } else {
                 return true;
             }
@@ -3340,7 +3261,6 @@ if (!function_exists('transformExcelDate')) {
                 $date = \Carbon\Carbon::instance(\PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject($value));
                 return $date->format($format);
             }
-
         } catch (\ErrorException $e) {
             $date = \Carbon\Carbon::createFromFormat($format, $value);
             return $date->format($format);
@@ -3398,12 +3318,9 @@ if (!function_exists('updateModuleParentRoute')) {
                 Cache::forget('RoleList_' . SaasDomain());
                 Cache::forget('PolicyPermissionList_' . SaasDomain());
                 Cache::forget('PolicyRoleList_' . SaasDomain());
-
             }
             return true;
         });
-
-
     }
 }
 
@@ -3495,7 +3412,6 @@ if (!function_exists('paymentGateWayCredentialsEmptyCheck')) {
             } else {
                 $result = false;
             }
-
         } elseif ($method == 'Authorize.Net') {
             if (!empty(getPaymentEnv('AUTHORIZE_NET_API_KEY')) && !empty(getPaymentEnv('AUTHORIZE_NET_API_KEY')) && !empty(getPaymentEnv('AUTHORIZE_NET_TRANSACTION_KEY'))) {
                 $result = true;
@@ -3554,7 +3470,6 @@ if (!function_exists('affiliateConfig')) {
                 if (Cache::has('affiliate_config_' . SaasDomain())) {
                     $affiliate_configs = Cache::get('affiliate_config_' . SaasDomain());
                     return $affiliate_configs[$key];
-
                 } else {
                     Cache::forget('affiliate_config_' . SaasDomain());
                     $datas = [];
@@ -3570,7 +3485,6 @@ if (!function_exists('affiliateConfig')) {
             } else {
                 return false;
             }
-
         } catch (Exception $exception) {
             return false;
         }
@@ -3589,7 +3503,6 @@ if (!function_exists('isAffiliateUser')) {
                 }
             }
             return false;
-
         } catch (Exception $exception) {
             return false;
         }
@@ -3612,7 +3525,6 @@ if (!function_exists('hasAffiliateAccess')) {
             }
 
             return false;
-
         } catch (Exception $exception) {
             return false;
         }
@@ -3648,16 +3560,12 @@ if (!function_exists('showPrice')) {
             }
             if ($type == 1) {
                 $result = $symbol . $price;
-
             } elseif ($type == 2) {
                 $result = $symbol . ' ' . $price;
-
             } elseif ($type == 3) {
                 $result = $price . $symbol;
-
             } elseif ($type == 4) {
                 $result = $price . ' ' . $symbol;
-
             } else {
                 $result = $price;
             }
@@ -3738,7 +3646,6 @@ if (!function_exists('orgGetStartEndDate')) {
                 if (!empty($end)) {
                     $days['end'] = Carbon::parse($end)->format('d/m/Y h:i A');
                 }
-
             }
         } elseif (isset($enroll->shift) && $enroll->shift != 0) {
             $shift = $enroll->shiftDetails();
@@ -3749,7 +3656,6 @@ if (!function_exists('orgGetStartEndDate')) {
                 $days['start'] = trans('common.Not Set');
                 $days['end'] = trans('common.Not Set');
             }
-
         } else {
             $days['start'] = Carbon::parse($course->created_at)->format('d/m/Y h:i A');
             $days['end'] = trans('org.Limitless');
@@ -3784,7 +3690,6 @@ if (!function_exists('getPercentage')) {
             } else {
                 return 0;
             }
-
         } catch (\Exception $e) {
             return 0;
         }
@@ -3832,9 +3737,7 @@ if (!function_exists('clearAllLangCache')) {
                 Cache::forget($key . $lang->code . $domain);
             }
         } catch (\Exception $exception) {
-
         }
-
     }
 }
 if (!function_exists('footerSettings')) {
@@ -3851,8 +3754,10 @@ if (!function_exists('footerSettings')) {
 if (!function_exists('convertToSlug')) {
     function convertToSlug($str, $delimiter = '-')
     {
-        $unwanted_array = ['ś' => 's', 'ą' => 'a', 'ć' => 'c', 'ç' => 'c', 'ę' => 'e', 'ł' => 'l', 'ń' => 'n', 'ó' => 'o', 'ź' => 'z', 'ż' => 'z',
-            'Ś' => 's', 'Ą' => 'a', 'Ć' => 'c', 'Ç' => 'c', 'Ę' => 'e', 'Ł' => 'l', 'Ń' => 'n', 'Ó' => 'o', 'Ź' => 'z', 'Ż' => 'z'];
+        $unwanted_array = [
+            'ś' => 's', 'ą' => 'a', 'ć' => 'c', 'ç' => 'c', 'ę' => 'e', 'ł' => 'l', 'ń' => 'n', 'ó' => 'o', 'ź' => 'z', 'ż' => 'z',
+            'Ś' => 's', 'Ą' => 'a', 'Ć' => 'c', 'Ç' => 'c', 'Ę' => 'e', 'Ł' => 'l', 'Ń' => 'n', 'Ó' => 'o', 'Ź' => 'z', 'Ż' => 'z'
+        ];
         $str = strtr($str, $unwanted_array);
 
         $slug = strtolower(trim(preg_replace('/[\s-]+/', $delimiter, preg_replace('/[^A-Za-z0-9-]+/', $delimiter, preg_replace('/[&]/', 'and', preg_replace('/[\']/', '', iconv('UTF-8', 'ASCII//TRANSLIT', $str))))), $delimiter));
@@ -3919,7 +3824,6 @@ if (!function_exists('getActiveJsDateFormat')) {
 
         return $jsFormat;
     }
-
 }
 if (!function_exists('getActivePhpDateFormat')) {
     function getActivePhpDateFormat(): string
@@ -3997,7 +3901,6 @@ if (!function_exists('MarkAsBlogRead')) {
                 'blog_id' => $blog_id,
             ]);
         }
-
     }
 }
 if (!function_exists('upgradeLevelPayment')) {
@@ -4009,8 +3912,6 @@ if (!function_exists('upgradeLevelPayment')) {
             return true;
         }
         return false;
-
-
     }
 }
 if (!function_exists('spn_active_link')) {
@@ -4133,7 +4034,6 @@ if (!function_exists('generateBreadcrumb')) {
         } catch (\Exception $e) {
             return '';
         }
-
     }
 }
 if (!function_exists('dbDateFormat')) {
@@ -4189,7 +4089,6 @@ if (!function_exists('checkGamification')) {
             } elseif ($type == 'each_survey' && Settings('gamification_badges_survey_status')) {
                 $enable = true;
             }
-
         } elseif (isModuleActive('Org')) {
             if ($type == 'each_login' && Settings('gamification_point_each_login_status')) {
                 $point = 1;
@@ -4201,7 +4100,7 @@ if (!function_exists('checkGamification')) {
             } elseif ($type == 'each_perfectionism' && Settings('gamification_badges_perfectionism_status')) {
                 $enable = true;
             } elseif ($type == 'each_survey' && Settings('gamification_badges_survey_status')) {
-//                $point = 1;
+                //                $point = 1;
                 $enable = true;
             } elseif ($type == 'each_certificate' && Settings('gamification_point_each_certificate_status')) {
                 $point = 1;
@@ -4234,8 +4133,6 @@ if (!function_exists('checkGamification')) {
                 ];
                 Notification::send($user, new GeneralNotification($details));
             }
-
-
         }
 
         $totalGamificationPoint = UserGamificationPoint::where('badge_type', $badge_type)->where('user_id', auth()->id())->sum('point');
@@ -4293,7 +4190,6 @@ if (!function_exists('checkUserLevel')) {
                     $user->save();
                     createUserLevelHistory($user->id, 'course', $point);
                 }
-
             }
             if (Settings('gamification_level_entry_badge_status')) {
                 $point = (int)Settings('gamification_level_entry_badge_point');
@@ -4315,9 +4211,7 @@ if (!function_exists('checkUserLevel')) {
                 //                    }
                 //                }
             }
-
         }
-
     }
 }
 
@@ -4334,8 +4228,6 @@ if (!function_exists('createUserLevelHistory')) {
             ]);
             Toastr::success(trans('common.A new level has been unlocked'), trans('common.Congratulations'));
         }
-
-
     }
 }
 
@@ -4347,7 +4239,6 @@ if (!function_exists('organizationSettings')) {
                 if (Cache::has('organization_settings')) {
                     $settings = Cache::get('organization_settings');
                     return $settings[$name];
-
                 } else {
                     Cache::forget('organization_settings');
                     $datas = [];
@@ -4363,7 +4254,6 @@ if (!function_exists('organizationSettings')) {
             } else {
                 return false;
             }
-
         } catch (Exception $exception) {
             return false;
         }
@@ -4389,7 +4279,6 @@ if (!function_exists('availableRolesForBadges')) {
                 $availableRoles = implode(', ', $roles);
             }
             return $availableRoles;
-
         } catch (\Exception $exception) {
             return false;
         }
@@ -4434,8 +4323,6 @@ if (!function_exists('checkGamificationReg')) {
                 }
             }
         }
-
-
     }
 }
 
@@ -4573,7 +4460,6 @@ if (!function_exists('_trans')) {
 
                             file_put_contents($file_path, $str, $flags = 0, $context = null);
                         }
-
                     } else {
 
                         fopen($file_path, 'w');
@@ -4618,8 +4504,6 @@ if (!function_exists('_trans')) {
                         $str .= $end;
 
                         file_put_contents($file_path, $str, $flags = 0, $context = null);
-
-
                     }
 
                     return _translation($value);
@@ -4671,11 +4555,9 @@ if (!function_exists('_trans')) {
 
                     file_put_contents($file_path, $str, $flags = 0, $context = null);
                     return _translation($value);
-
                 }
                 return _translation($value);
             }
-
         } catch (Exception $exception) {
             return $value;
         }
@@ -4757,7 +4639,6 @@ if (!function_exists('registrationBonusSetting')) {
         } else {
             return false;
         }
-
     }
 }
 
@@ -4806,16 +4687,13 @@ if (!function_exists('orgLeaderboardPointCheck')) {
                     'interaction_type' => $interaction_type,
                 ]);
             }
-
         }
-
     }
 }
 if (!function_exists('richTextWordLength')) {
     function richTextWordLength($string)
     {
         return str_word_count(strip_tags($string));
-
     }
 }
 if (!function_exists('checkEmptyValue')) {
@@ -4892,7 +4770,6 @@ if (!function_exists('hasCourseValidAccess')) {
                 Toastr::error(trans('frontend.Your access validity is expired'), trans('common.Failed'));
                 return false;
             }
-
         }
         return true;
     }
@@ -4978,7 +4855,6 @@ if (!function_exists('UserSmsNotificationSetup')) {
                 } else {
                     return false;
                 }
-
             } else {
                 return true;
             }
@@ -5171,7 +5047,6 @@ if (!function_exists('pickupLocationData')) {
             } else {
                 return false;
             }
-
         } catch (Exception $exception) {
             return false;
         }

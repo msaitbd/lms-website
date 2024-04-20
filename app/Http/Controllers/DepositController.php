@@ -52,7 +52,6 @@ class DepositController extends Controller
         } else {
             return redirect(route('dashboard'));
         }
-
     }
 
     public function depositSelectOption(Request $request)
@@ -89,7 +88,6 @@ class DepositController extends Controller
         if ($data['method'] == "Sslcommerz") {
             $ssl = new SslcommerzController();
             $ssl->deposit($amount);
-
         } elseif ($data['method'] == "PayPal") {
 
             $response = $this->payPalGateway->purchase(array(
@@ -121,10 +119,7 @@ class DepositController extends Controller
                 }
             } catch (\Exception $e) {
                 GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
-
             }
-
-
         } elseif ($data['method'] == "Payeer") {
 
             try {
@@ -139,10 +134,7 @@ class DepositController extends Controller
                 }
             } catch (\Exception $e) {
                 GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
-
             }
-
-
         } elseif ($data['method'] == "MercadoPago") {
             $mercadoPagoController = new MercadoPagoController();
             $response = $mercadoPagoController->payment($request->all());
@@ -156,7 +148,6 @@ class DepositController extends Controller
                 Toastr::error('Something went wrong', 'Failed');
                 return \redirect()->back();
             }
-
         } elseif ($data['method'] == "Stripe") {
 
             if (empty($request->get('stripeToken'))) {
@@ -181,7 +172,6 @@ class DepositController extends Controller
             } elseif ($response->isSuccessful()) {
                 // payment was successful: update database
 
-//                $amount = number_format($response->getData()['amount'] / 100, 2);
 
                 $payWithStripe = $this->depositWithGateWay($amount, $response, "Stripe");
                 if ($payWithStripe) {
@@ -191,7 +181,6 @@ class DepositController extends Controller
                     Toastr::error('Something Went Wrong', 'Error');
                     return $this->redirectToDashboard();
                 }
-
             } else {
 
                 if ($response->getCode() == "amount_too_small") {
@@ -200,7 +189,6 @@ class DepositController extends Controller
                     Toastr::error($response->getMessage(), 'Error');
                 }
                 return redirect()->back();
-
             }
         } elseif ($data['method'] == "RazorPay") {
 
@@ -260,7 +248,6 @@ class DepositController extends Controller
                 return redirect($url);
             } catch (\Exception $e) {
                 GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
-
             }
         } elseif ($data['method'] == "Bank Payment") {
 
@@ -285,10 +272,30 @@ class DepositController extends Controller
                 } else {
                     return redirect()->back();
                 }
-
             } catch (\Exception $e) {
                 GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
+            }
+        } elseif ($data['method'] == "Bkash Payment") {
 
+            $rules = [
+                'bkash_trxid' => 'required',
+                'bkash_from_number' => 'required',
+            ];
+            $this->validate($request, $rules, validationMessage($rules));
+
+
+            try {
+
+                $payment = new BkashPaymentCotroller();
+                $result = $payment->store($request);
+
+                if ($result) {
+                    return $this->redirectToDashboard();
+                } else {
+                    return redirect()->back();
+                }
+            } catch (\Exception $e) {
+                GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
             }
         } elseif ($data['method'] == "Pesapal") {
             try {
@@ -306,15 +313,12 @@ class DepositController extends Controller
                 $iframe_src = Pesapal::getIframeSource($paymentData);
 
                 return view('laravel_pesapal::iframe', compact('iframe_src'));
-
             } catch (\Exception $e) {
                 GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
-
             }
         } elseif ($data['method'] == "Mobilpay") {
             $mobilpay = new MobilpayController();
             return $mobilpay->depositProcess($request);
-
         } elseif ($data['method'] == 'Authorize.Net') {
             $authorize = new \Modules\AuthorizeNet\Repositories\AuthorizeNetRepository();
             $response = $authorize->payNow($request, $data['deposit_amount']);
@@ -459,8 +463,6 @@ class DepositController extends Controller
                 return back();
             }
         }
-
-
     }
 
 
@@ -503,15 +505,12 @@ class DepositController extends Controller
                 Toastr::success('Deposit done successfully', trans('common.Success'));
                 DB::commit();
                 return true;
-
             } else {
 
                 Log::info('Something Went Wrong');
                 Toastr::error('Something Went Wrong', 'Error');
                 return false;
             }
-
-
         } catch (\Exception $e) {
             GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent(), true);
         }
@@ -542,7 +541,6 @@ class DepositController extends Controller
                     Toastr::error('Something Went Wrong', 'Error');
                     return $this->redirectToDashboard();
                 }
-
             } else {
                 $msg = str_replace("'", " ", $response->getMessage());
                 Toastr::error($msg, 'Failed');
@@ -552,8 +550,6 @@ class DepositController extends Controller
             Toastr::error('Transaction is declined');
             return redirect()->back();
         }
-
-
     }
 
     public function paypalDepositFailed()
