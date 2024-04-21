@@ -49,18 +49,22 @@ class BkashPaymentCotroller extends Controller
 
     public function update(Request $request, $id)
     {
+        DB::beginTransaction();
         try {
             $request = BkashPaymentRequest::findOrFail($id);
             $request->status = 1;
             $request->save();
 
             $result = $this->depositWithGateWay($request->amount, $request->user_id);
+            DB::commit();
             if ($result) {
                 return redirect()->back();
             } else {
                 return redirect()->back();
             }
         } catch (\Exception $e) {
+            DB::rollBack();
+            dd($e->getMessage());
             GettingError($e->getMessage(), url()->current(), request()->ip(), request()->userAgent());
         }
     }
@@ -79,59 +83,6 @@ class BkashPaymentCotroller extends Controller
                 $depositRecord->amount = $amount;
                 $depositRecord->save();
 
-                if (isModuleActive('Cashback') && $depositRecord) {
-                    generateCashback($depositRecord->user_id, $depositRecord->amount, 'recharge', $depositRecord);
-                }
-                if (isModuleActive('Organization') && $user->isOrganization()) {
-                    $data = [
-                        'user_id' => $user->id,
-                        'amount' => $amount,
-                        'status' => true,
-                        'type' => OrganizationFinance::$credit,
-                        'description' => OrganizationFinance::$deposit_description,
-                        'data_type' => OrganizationFinance::$type_deposit,
-                        'payment_type' => OrganizationFinance::$payment_completed,
-                    ];
-                    event(new CourseSellCommissionEvent($data));
-                }
-
-
-                if (UserEmailNotificationSetup('Bank_Payment', $user)) {
-                    SendGeneralEmail::dispatch($user, 'Bank_Payment', [
-                        'amount' => $amount,
-                        'currency' => Settings('currency_code'),
-                        'time' => now()->format(Settings('active_date_format') . ' H:i:s A')
-                    ]);
-                }
-                if (UserBrowserNotificationSetup('Bank_Payment', $user)) {
-                    send_browser_notification(
-                        $user,
-                        'Bank_Payment',
-                        [
-                            'amount' => $amount,
-                            'currency' => Settings('currency_code'),
-                            'time' => now()->format(Settings('active_date_format') . ' H:i:s A')
-                        ],
-                        '', //actionText
-                        '' //actionUrl
-                    );
-                }
-                if (UserSmsNotificationSetup('Bank_Payment', $user)) {
-                    send_sms_notification($user, 'Bank_Payment', [
-                        'amount' => $amount,
-                        'currency' => Settings('currency_code'),
-                        'time' => now()->format(Settings('active_date_format') . ' H:i:s A')
-                    ]);
-                }
-
-                if (UserMobileNotificationSetup('Bank_Payment', $user) && !empty($user->device_token)) {
-                    send_mobile_notification($user, 'Bank_Payment', [
-                        'amount' => $amount,
-                        'currency' => Settings('currency_code'),
-                        'time' => now()->format(Settings('active_date_format') . ' H:i:s A')
-                    ]);
-                }
-
                 Toastr::success(trans('common.Operation successful'), trans('common.Success'));
                 DB::commit();
                 return true;
@@ -142,6 +93,7 @@ class BkashPaymentCotroller extends Controller
             }
         } catch (\Exception $e) {
             DB::rollBack();
+            dd($e->getMessage());
             Toastr::error('Something Went Wrong', 'Error');
             return false;
         }
