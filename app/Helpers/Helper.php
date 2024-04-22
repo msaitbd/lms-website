@@ -3976,20 +3976,19 @@ if (!function_exists('dynamicContentAppend')) {
             $dom = new HTML5DOMDocument();
             $dom->loadHTML($content, HTML5DOMDocument::ALLOW_DUPLICATE_IDS);
             $nodes = $dom->querySelectorAll('.dynamicData');
-
             if ($nodes) {
+                $contentData = [];
                 foreach ($nodes as $node) {
-
                     $parent_data = $node->parentNode->getAttributes();
                     $request = [];
                     $param = [];
                     foreach ($parent_data as $key => $data) {
-                        //                        $param[] = $key;
                         $param[$key] = $data;
                     }
-
+                    
                     $request['param'] = $param;
                     request()->merge($request);
+                    $contentData[] = $param;
 
                     $themeDynamic = new ThemeDynamicData();
                     $data = $themeDynamic->__invoke(request());
@@ -4003,7 +4002,7 @@ if (!function_exists('dynamicContentAppend')) {
                     }
                 }
             }
-
+            // dd($contentData);
             return $dom->saveHTML();
         } catch (\Exception $exception) {
             if (env('APP_ENV') == 'local') {
